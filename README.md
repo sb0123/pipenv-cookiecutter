@@ -1,4 +1,4 @@
-# Python Best Practices Cookiecutter
+# Pipenv Python Cookiecutter
 
 Best practices [cookiecutter](https://github.com/audreyr/cookiecutter) template as described in this [blogpost](https://sourcery.ai/blog/python-best-practices/).
 
