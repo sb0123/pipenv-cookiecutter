@@ -13,6 +13,7 @@ Best practices [cookiecutter](https://github.com/audreyr/cookiecutter) template 
 - Continuous Integration with [GitHub Actions](https://github.com/features/actions)
 
 ## Quickstart
+Before you start, make sure you've covered [the basics](./the_basics.md).
 ```sh
 # Install pipx if pipenv and cookiecutter are not installed
 python3 -m pip install pipx
@@ -20,6 +21,9 @@ python3 -m pipx ensurepath
 
 # Install pipenv using pipx
 pipx install pipenv
+
+# Install cookiecutter using pipx
+pipx install cookiecutter
 
 # Use cookiecutter to create project from this template
 pipx run cookiecutter gh:aj-cloete/pipenv-cookiecutter
