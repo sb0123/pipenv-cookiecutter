@@ -43,7 +43,7 @@ setup(
     {%- if 'no' not in cookiecutter.command_line_interface|lower %}
     entry_points={
         'console_scripts': [
-            '{{ cookiecutter.project_slug }}={{ cookiecutter.project_slug }}.cli:main',
+            '{{ cookiecutter.repo_name }}={{ cookiecutter.repo_name }}.cli:main',
         ],
     },
     {%- endif %}
@@ -53,13 +53,13 @@ setup(
 {%- endif %}
     long_description=readme + '\n\n' + history,
     include_package_data=True,
-    keywords='{{ cookiecutter.project_slug }}',
-    name='{{ cookiecutter.project_slug }}',
-    packages=find_packages(include=['{{ cookiecutter.project_slug }}']),
+    keywords='{{ cookiecutter.repo_name }}',
+    name='{{ cookiecutter.repo_name }}',
+    packages=find_packages(include=['{{ cookiecutter.repo_name }}']),
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}',
+    url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
     version='{{ cookiecutter.version }}',
     zip_safe=False,
 )

@@ -1,4 +1,13 @@
 {
+  "full_name": "André Cloete",
+  "email": "ajcloete@gmail.com",
+  "github_username": "aj-cloete",
   "project_name": "Best Practices",
-  "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}"
+  "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "project_short_description": "{{ cookiecutter.project_name }} contains all the boilerplate you need to create a Python package.",
+  "version": "0.1.0",
+  "command_line_interface": ["Click", "No command-line interface"],
+  "create_author_file": "y",
+  "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"]
+
 }
