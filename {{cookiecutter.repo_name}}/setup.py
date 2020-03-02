@@ -5,7 +5,7 @@
 
 from typing import List
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 with open("README.rst") as readme_file:
     readme = readme_file.read()
@@ -13,11 +13,11 @@ with open("README.rst") as readme_file:
 with open("HISTORY.rst") as history_file:
     history = history_file.read()
 
-requirements = [{%- if cookiecutter.command_line_interface|lower == "click" %}"Click>=6.0",{%- endif %} ] # type: List[str]
+requirements = [{%- if cookiecutter.command_line_interface|lower == "click" %}"Click>=6.0"{%- endif %}] # type: List[str]
 
-setup_requirements = [{%- if cookiecutter.use_pytest == "y" %}"pytest-runner",{%- endif %} ] # type: List[str]
+setup_requirements = [{%- if cookiecutter.use_pytest == "y" %}"pytest-runner"{%- endif %}] # type: List[str]
 
-test_requirements = [{%- if cookiecutter.use_pytest == "y" %}"pytest",{%- endif %} ] # type: List[str]
+test_requirements = [{%- if cookiecutter.use_pytest == "y" %}"pytest"{%- endif %}] # type: List[str]
 
 {%- set license_classifiers = {
     "MIT license": "License :: OSI Approved :: MIT License",
@@ -43,17 +43,13 @@ setup(
     ],
     description="{{ cookiecutter.project_short_description }}",
     {%- if "no" not in cookiecutter.command_line_interface|lower %}
-    entry_points={
-        "console_scripts": [
-            "{{ cookiecutter.repo_name }}={{ cookiecutter.repo_name }}.cli:main",
-        ],
-    },
+    entry_points={"console_scripts": ["{{ cookiecutter.repo_name }}={{ cookiecutter.repo_name }}.cli:main"]},
     {%- endif %}
     install_requires=requirements,
 {%- if cookiecutter.open_source_license in license_classifiers %}
     license="{{ cookiecutter.open_source_license }}",
 {%- endif %}
-    long_description=readme + '\n\n' + history,
+    long_description=readme + "\n\n" + history,
     include_package_data=True,
     keywords="{{ cookiecutter.repo_name }}",
     name="{{ cookiecutter.repo_name }}",
