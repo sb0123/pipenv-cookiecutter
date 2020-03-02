@@ -5,13 +5,20 @@
 Setup
 =====
 
+Before you do anything else, run the following from the root directory of the repo:
 ::
-    # Install dependencies
-    pipenv install --dev
-    
-    # Setup pre-commit and pre-push hooks
-    pipenv run pre-commit install -t pre-commit
-    pipenv run pre-commit install -t pre-push
+
+  # Install dependencies
+  pipenv install --dev
+  
+  # Setup pre-commit and pre-push hooks
+  pipenv run pre-commit install -t pre-commit
+  pipenv run pre-commit install -t pre-push
+
+To activate the environment, again from the root directory of the repo:
+::
+
+  pipenv shell
 
 
 Credits
