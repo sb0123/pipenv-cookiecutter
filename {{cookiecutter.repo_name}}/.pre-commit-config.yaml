@@ -3,6 +3,20 @@ exclude: docs
 repos:
 - repo: local
   hooks:
+  - id: pipenv-setup-sync
+    name: pipenv-setup-sync
+    stages: [commit]
+    language: system
+    entry: pipenv-setup sync --pipfile
+    pass_filenames: false
+
+  - id: pipenv-setup-check
+    name: pipenv-setup-check
+    stages: [commit]
+    language: system
+    entry: pipenv-setup check
+    pass_filenames: false
+
   - id: isort
     name: isort
     stages: [commit]
@@ -47,6 +61,13 @@ repos:
     types: [python]
     pass_filenames: false
 
+  - id: pipenv-update-lock
+    name: pipenv-update-lock
+    stages: [commit]
+    language: system
+    entry: pipenv update
+    pass_filenames: false
+    
   - id: pytest-cov
     name: pytest
     stages: [push]
