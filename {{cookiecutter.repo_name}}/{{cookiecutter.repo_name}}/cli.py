@@ -3,6 +3,7 @@
 
 """Console script for {{cookiecutter.repo_name}}."""
 import sys
+
 import click
 
 
