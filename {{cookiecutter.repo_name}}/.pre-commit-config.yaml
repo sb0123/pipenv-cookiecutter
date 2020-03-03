@@ -7,14 +7,14 @@ repos:
     name: pipenv-setup-sync
     stages: [commit]
     language: system
-    entry: pipenv-setup sync --pipfile
+    entry: pipenv run pipenv-setup sync --pipfile
     pass_filenames: false
 
   - id: pipenv-setup-check
     name: pipenv-setup-check
     stages: [commit]
     language: system
-    entry: pipenv-setup check
+    entry: pipenv run pipenv-setup check
     pass_filenames: false
 
   - id: isort
@@ -59,7 +59,7 @@ repos:
     name: pipenv-update-lock
     stages: [push]
     language: system
-    entry: pipenv update
+    entry: pipenv run pipenv update
     pass_filenames: false
     
   - id: pytest-cov
