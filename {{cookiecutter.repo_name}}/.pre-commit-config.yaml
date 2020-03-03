@@ -63,7 +63,7 @@ repos:
 
   - id: pipenv-update-lock
     name: pipenv-update-lock
-    stages: [commit]
+    stages: [push]
     language: system
     entry: pipenv update
     pass_filenames: false
