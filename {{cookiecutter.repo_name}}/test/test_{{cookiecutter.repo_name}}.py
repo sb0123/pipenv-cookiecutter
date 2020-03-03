@@ -1,6 +1,6 @@
 from {{cookiecutter.repo_name}} import cli
 from {{cookiecutter.repo_name}}.{{cookiecutter.repo_name}} import fib
-form click.testing import CliRunner
+from click.testing import CliRunner
 
 def test_fib() -> None:
     assert fib(0) == 0
