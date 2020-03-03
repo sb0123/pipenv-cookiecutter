@@ -39,6 +39,7 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
     ],
+    dependency_links=[],
     description="{{ cookiecutter.project_short_description }}",
     {%- if "no" not in cookiecutter.command_line_interface|lower %}
     entry_points={"console_scripts": ["{{ cookiecutter.repo_name }}={{ cookiecutter.repo_name }}.cli:main"]},
