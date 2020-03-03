@@ -1,6 +1,7 @@
+from click.testing import CliRunner
+
 from {{cookiecutter.repo_name}} import cli
 from {{cookiecutter.repo_name}}.{{cookiecutter.repo_name}} import fib
-from click.testing import CliRunner
 
 def test_fib() -> None:
     assert fib(0) == 0
@@ -13,6 +14,6 @@ def test_fib() -> None:
 
 
 def test_cli() -> None:
-  runner = CliRunner()
-  result = runner.invoke(cli.main)
-  assert result.exit_code == 0
+    runner = CliRunner()
+    result = runner.invoke(cli.main)
+    assert result.exit_code == 0
