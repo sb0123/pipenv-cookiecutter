@@ -14,7 +14,7 @@ repos:
     name: pipenv-setup
     stages: [commit]
     language: system
-    entry: pipenv-setup sync --pipfilef
+    entry: pipenv-setup sync --pipfile
 
   - id: black
     name: black
