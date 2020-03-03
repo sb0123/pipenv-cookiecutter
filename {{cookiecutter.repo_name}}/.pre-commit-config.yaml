@@ -1,8 +1,8 @@
 # See https://pre-commit.com/ for usage and config
+exclude: docs
 repos:
 - repo: local
   hooks:
-  exclude: docs
   - id: isort
     name: isort
     stages: [commit]
