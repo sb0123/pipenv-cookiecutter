@@ -23,12 +23,6 @@ repos:
     language: system
     entry: pipenv run isort
     types: [python]
-  
-  - id: pipenv-setup
-    name: pipenv-setup
-    stages: [commit]
-    language: system
-    entry: pipenv-setup sync --pipfile
 
   - id: black
     name: black
