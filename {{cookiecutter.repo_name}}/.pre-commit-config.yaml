@@ -1,39 +1,33 @@
 # See https://pre-commit.com/ for usage and config
-exclude: docs/
 repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks.git
+  rev: master
+  hooks:
+  - id: check-added-large-files
+  - id: check-docstring-first
+  - id: check-merge-conflict
+  - id: detect-aws-credentials
+  - id: detect-private-key
+  - id: end-of-file-fixer
+  - id: name-tests-test
+  - id: trailing-whitespace
+
 - repo: local
   hooks:
-  - id: pipenv-setup-sync
-    name: pipenv-setup-sync
-    stages: [commit]
-    language: system
-    entry: pipenv run pipenv-setup sync --pipfile
-    pass_filenames: false
-
-  - id: pipenv-setup-check
-    name: pipenv-setup-check
-    stages: [commit]
-    language: system
-    entry: pipenv run pipenv-setup check
-    pass_filenames: false
-
   - id: isort
     name: isort
-    stages: [commit]
     language: system
     entry: pipenv run isort
     types: [python]
 
   - id: black
     name: black
-    stages: [commit]
     language: system
     entry: pipenv run black
     types: [python]
 
   - id: flake8
     name: flake8
-    stages: [commit]
     language: system
     entry: pipenv run flake8
     types: [python]
@@ -41,31 +35,44 @@ repos:
 
   - id: mypy
     name: mypy
-    stages: [commit]
     language: system
     entry: pipenv run mypy
     types: [python]
+    exclude: docs/
     require_serial: true
 
   - id: pytest
     name: pytest
-    stages: [commit]
     language: system
     entry: pipenv run pytest
     types: [python]
     pass_filenames: false
 
-  - id: pipenv-update-lock
-    name: pipenv-update-lock
-    stages: [push]
-    language: system
-    entry: pipenv run pipenv update
-    pass_filenames: false
-    
   - id: pytest-cov
-    name: pytest
+    name: "pytest coverage"
     stages: [push]
     language: system
     entry: pipenv run pytest --cov --cov-fail-under=100
     types: [python]
+    pass_filenames: false
+
+  - id: pipenv-setup-sync
+    name: "pipenv-setup sync with pipfile"
+    stages: [push]
+    language: system
+    entry: pipenv run pipenv-setup sync --pipfile
+    pass_filenames: false
+
+  - id: pipenv-setup-check
+    name: "pipenv-setup check"
+    stages: [push]
+    language: system
+    entry: pipenv run pipenv-setup check
+    pass_filenames: false
+
+  - id: pipenv-update-lock
+    name: "Update pipfile.lock"
+    stages: [push]
+    language: system
+    entry: pipenv run pipenv update
     pass_filenames: false
