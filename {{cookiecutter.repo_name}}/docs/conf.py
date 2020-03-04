@@ -20,6 +20,7 @@
 #
 import os
 import sys
+
 sys.path.insert(0, os.path.abspath(".."))
 
 import {{ cookiecutter.repo_name }}
@@ -129,7 +130,8 @@ latex_elements = {
 # [howto, manual, or own class]).
 latex_documents = [
     (
-        master_doc, "{{ cookiecutter.repo_name }}.tex",
+        master_doc,
+        "{{ cookiecutter.repo_name }}.tex",
         u"{{ cookiecutter.project_name }} Documentation",
         u"{{ cookiecutter.full_name }}",
         "manual"),
@@ -152,7 +154,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     (
-        master_doc, 
+        master_doc,
         "{{ cookiecutter.repo_name }}",
         u"{{ cookiecutter.project_name }} Documentation",
         author,
