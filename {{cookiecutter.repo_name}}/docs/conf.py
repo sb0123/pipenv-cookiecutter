@@ -134,7 +134,8 @@ latex_documents = [
         "{{ cookiecutter.repo_name }}.tex",
         u"{{ cookiecutter.project_name }} Documentation",
         u"{{ cookiecutter.full_name }}",
-        "manual"),
+        "manual",
+    )
 ]
 
 
