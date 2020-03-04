@@ -3,6 +3,7 @@ from click.testing import CliRunner
 from {{cookiecutter.repo_name}} import cli
 from {{cookiecutter.repo_name}}.{{cookiecutter.repo_name}} import fib
 
+
 def test_fib() -> None:
     assert fib(0) == 0
     assert fib(1) == 1
