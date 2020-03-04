@@ -1,5 +1,5 @@
 # See https://pre-commit.com/ for usage and config
-exclude: docs
+exclude: docs/
 repos:
 - repo: local
   hooks:
