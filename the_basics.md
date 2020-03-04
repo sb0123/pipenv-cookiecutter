@@ -100,5 +100,16 @@ pipx install pipenv-pipes
 pipx install pipenv-setup
 ```
 
+#### Set up pre-commit and pre-push hooks
+To keep code nice and clean and avoid spending time on non-syntactic formatting differences 
+when reviewing code [git hooks](https://git-scm.com/docs/githooks) come in very handy.  
+To set up your git to automatically install pre-commit and pre-push hooks when present in the repo, 
+[see this guide](https://pre-commit.com/#automatically-enabling-pre-commit-on-repositories)
+```
+pipx install pre-commit
+git config --global init.templateDir ~/.git-template
+pre-commit init-templatedir ~/.git-template -t pre-commit -t pre-push
+```
+
 ## Done!
 If you followed all the steps up to here, you've done well! Give yourself a pat on the back.
