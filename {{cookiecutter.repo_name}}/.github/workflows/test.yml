@@ -23,7 +23,7 @@ jobs:
           pipenv install --deploy --dev
 
       - run: pipenv run isort --recursive --diff
-      - run: pipenv run black --check .
-      - run: pipenv run flake8
+      - run: pipenv run black --check . --exclude docs/
+      - run: pipenv run flake8 . --exclude docs/
       - run: pipenv run mypy
       - run: pipenv run pytest --cov --cov-fail-under=100
