@@ -75,10 +75,11 @@ a tool for simple Python version management (i.e. 3.6.10, 3.7.6, 3.8.1, etc)
 ```zsh
 brew install pyenv
 ```
-**important:** unless you want to have endless troubles with pyenv, make sure you do the following:
+**important:** *unless you want to have endless troubles with pyenv, make sure you do the following:*
 ```zsh
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
 ```
 *now close your terminal window and open a new one before continuing*
 
@@ -117,5 +118,8 @@ git config --global init.templateDir ~/.git-template
 pre-commit init-templatedir ~/.git-template -t pre-commit -t pre-push
 ```
 
+### Final step
+Close your terminal window (in fact, close all your terminal windows and quit terminal) and then relaunch terminal.
+
 ## Done!
-If you followed all the steps up to here, you've done well! Give yourself a pat on the back.
+If you followed all of the steps above to the tee - well done! Give yourself a pat on the back and rest assured that things ought to work as expected.  If I've missed anything in this guide and you're still having trouble, please let me know by [creating a ticket](https://github.com/aj-cloete/pipenv-cookiecutter/issues/new).
