@@ -43,7 +43,7 @@ Mac OS X may select automatically that could run counter to the development envi
 echo 'if ! [[ :$PATH: == *:"/usr/local/bin":* ]] ; then export PATH=/usr/local/bin:$PATH ; fi' >> ~/.zshrc
 exit
 ```
-*now close your terminal window and open a new one before continuing*
+> *now close your terminal window and open a new one before continuing*
 
 To make sure that everything went smoothly (or if you ever need to troubleshoot things in the future) run:
 ```zsh
@@ -84,7 +84,7 @@ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
 echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
 exit
 ```
-*now close your terminal window and open a new one before continuing*
+> *now close your terminal window and open a new one before continuing*
 
 #### Install pipx
 a tool to help you install and run end-user applications written in Python
@@ -93,7 +93,7 @@ brew install pipx
 pipx ensurepath
 exit
 ```
-
+> *now close your terminal window and open a new one before continuing*
 
 ## Install another few things with pipx
 #### Install pipenv
@@ -122,6 +122,7 @@ git config --global init.templateDir ~/.git-template
 pre-commit init-templatedir ~/.git-template -t pre-commit -t pre-push
 exit
 ```
+> *now close your terminal window and open a new one before continuing*
 
 ### Final step
 Close your terminal window (in fact, close all your terminal windows and quit terminal) and then relaunch terminal.
