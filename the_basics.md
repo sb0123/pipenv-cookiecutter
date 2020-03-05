@@ -40,8 +40,9 @@ This will ensure that Homebrew installations will be called over the tools that
 Mac OS X may select automatically that could run counter to the development environment we’re creating.
 
 ```zsh
-echo 'if ! [[ :$PATH: == *:"/usr/local/bin":* ]] ; then export PATH=/usr/local/bin:$PATH ; fi' >> ~/.zprofile
+echo 'if ! [[ :$PATH: == *:"/usr/local/bin":* ]] ; then export PATH=/usr/local/bin:$PATH ; fi' >> ~/.zshrc
 ```
+*now close your terminal window and open a new one before continuing*
 
 To make sure that everything went smoothly (or if you ever need to troubleshoot things in the future) run:
 ```zsh
