@@ -104,8 +104,7 @@ Before you submit a pull request, check that it meets these guidelines:
 Tips
 ----
 
-You can check the command next to each of the **entry:** lines in `this file </.pre-commit-config.yaml>`_ 
-to understand what each of the individual pre-commit hooks runs.
+You can check the command next to each of the **entry:** lines in `this file </.pre-commit-config.yaml>`_ to understand what each of the individual pre-commit hooks runs.
 
 Deploying
 ---------
