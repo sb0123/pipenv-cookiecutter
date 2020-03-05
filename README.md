@@ -19,7 +19,10 @@ Install **pipx**
 ```
 python3 -m pip install pipx
 python3 -m pipx ensurepath
+exit
 ```
+> *now close your terminal window and open a new one before continuing*
+
 Install **pipenv** using pipx
 ```
 pipx install pipenv
@@ -28,7 +31,11 @@ Install **cookiecutter** using pipx
 ```
 pipx install cookiecutter
 ```
-Use cookiecutter to create project from this template
+Use **cookiecutter to create project** from this template.  
+*The folder will be created in the working directory (`pwd`) so make sure you `cd` to where you want to be.*
+> I use `~/dev/` for my development projects.
+
+Running the following command will ask you a series of questions, including the name of the project and your github username, so make sure you have those handy.
 ```
 pipx run cookiecutter gh:aj-cloete/pipenv-cookiecutter
 ```
@@ -50,8 +57,7 @@ pipenv install --dev
 
 Setup pre-commit and pre-push hooks
 ```
-pipenv run pre-commit install -t pre-commit
-pipenv run pre-commit install -t pre-push
+pipenv run pre-commit install -t pre-commit -t pre-push
 ```
 
 Remeber to actually activate the environment when you want to interact with the code! From the root folder of the repo:
