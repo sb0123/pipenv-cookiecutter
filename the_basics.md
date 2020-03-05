@@ -75,6 +75,12 @@ a tool for simple Python version management (i.e. 3.6.10, 3.7.6, 3.8.1, etc)
 ```zsh
 brew install pyenv
 ```
+**important:** unless you want to have endless troubles with pyenv, make sure you do the following:
+```zsh
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+```
+*now close your terminal window and open a new one before continuing*
 
 #### Install pipx
 a tool to help you install and run end-user applications written in Python
