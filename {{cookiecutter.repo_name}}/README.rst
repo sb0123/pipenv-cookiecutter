@@ -14,10 +14,10 @@ Before you do anything else, run the following from the root directory of the re
 
   # Install dependencies
   pipenv install --dev
-  
+
   # Setup pre-commit and pre-push hooks
   pipenv run pre-commit install -t pre-commit -t pre-push
-  
+
 
 
 To activate the environment, again from the root directory of the repo:
