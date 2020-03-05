@@ -41,6 +41,7 @@ Mac OS X may select automatically that could run counter to the development envi
 
 ```zsh
 echo 'if ! [[ :$PATH: == *:"/usr/local/bin":* ]] ; then export PATH=/usr/local/bin:$PATH ; fi' >> ~/.zshrc
+exit
 ```
 *now close your terminal window and open a new one before continuing*
 
@@ -81,6 +82,7 @@ brew install pyenv
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
 echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
+exit
 ```
 *now close your terminal window and open a new one before continuing*
 
@@ -89,6 +91,7 @@ a tool to help you install and run end-user applications written in Python
 ```zsh
 brew install pipx
 pipx ensurepath
+exit
 ```
 
 
@@ -117,6 +120,7 @@ To set up your git to automatically install pre-commit and pre-push hooks when p
 pipx install pre-commit
 git config --global init.templateDir ~/.git-template
 pre-commit init-templatedir ~/.git-template -t pre-commit -t pre-push
+exit
 ```
 
 ### Final step
