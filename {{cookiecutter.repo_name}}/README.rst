@@ -4,7 +4,7 @@
 {{cookiecutter.project_name}}
 ******************************************************
 
-{{cookiecutter.}}
+{{cookiecutter.project_short_description}}
 
 Setup
 =====
