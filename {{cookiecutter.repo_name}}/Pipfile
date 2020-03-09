@@ -11,12 +11,14 @@ python_version = "{python_version}"
 
 [dev-packages]
 black = "==19.3b0"
+bumpversion = "*"
 flake8 = "*"
 isort = "*"
 mypy = "*"
 pre-commit = "*"
 pytest = "*"
 pytest-cov = "*"
+sphinx = "*"
 
 [scripts]
 init = "pipenv run pre-commit install -t pre-commit -t pre-push"
