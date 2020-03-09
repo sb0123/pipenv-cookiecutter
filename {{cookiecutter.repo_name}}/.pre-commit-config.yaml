@@ -9,6 +9,7 @@ repos:
   - id: detect-aws-credentials
   - id: detect-private-key
   - id: end-of-file-fixer
+    exclude: docs/
   - id: trailing-whitespace
 
 - repo: local
@@ -37,7 +38,6 @@ repos:
     language: system
     entry: pipenv run mypy
     types: [python]
-    exclude: docs/
     require_serial: true
 
   - id: pytest

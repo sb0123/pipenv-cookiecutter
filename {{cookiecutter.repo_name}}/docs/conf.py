@@ -20,9 +20,11 @@
 import os
 import sys
 
-import {{ cookiecutter.repo_name }}
-
-sys.path.insert(0, os.path.abspath(".."))
+try:
+    from .. import {{ cookiecutter.repo_name }}
+except:
+    sys.path.insert(0, os.path.abspath(".."))
+    import {{ cookiecutter.repo_name }}
 
 
 # -- General configuration ---------------------------------------------
@@ -41,8 +43,7 @@ templates_path = ["_templates"]
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-# source_suffix = [".rst", ".md"]
-source_suffix = ".rst"
+source_suffix = [".rst", ".md"]
 
 # The master toctree document.
 master_doc = "index"
