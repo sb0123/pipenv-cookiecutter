@@ -11,21 +11,22 @@
 #
 # All configuration values have a default; values that are commented out
 # serve to show the default.
-
+#
 # If extensions (or modules to document with autodoc) are in another
 # directory, add these directories to sys.path here. If the directory is
 # relative to the documentation root, use os.path.abspath to make it
 # absolute, like shown here.
 #
+# type: ignore
+
 import os
 import sys
 
 try:
-    from .. import {{ cookiecutter.repo_name }}
-except:
+    import best_practices
+except Exception:
     sys.path.insert(0, os.path.abspath(".."))
-    import {{ cookiecutter.repo_name }}
-
+    import best_practices
 
 # -- General configuration ---------------------------------------------
 
