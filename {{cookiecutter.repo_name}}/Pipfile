@@ -21,8 +21,7 @@ pytest-cov = "*"
 sphinx = "*"
 
 [scripts]
-init = "pipenv run pre-commit install -t pre-commit -t pre-push"
-test = "pipenv run pytest"
+init = "pipenv run $SHELL scripts/init.sh"
 commit_test = "pipenv run pre-commit run --hook-stage commit"
 push_test = "pipenv run pre-commit run --hook-stage push"
 test_all = "pipenv run pre-commmit run -a"

@@ -1,4 +1,4 @@
-|Github Test|
+|Github Test| |Pre-Commit|
 
 ******************************************************
 {{cookiecutter.project_name}}
@@ -16,8 +16,7 @@ Before you do anything else, run the following from the root directory of the re
   pipenv install --dev
 
   # Setup pre-commit and pre-push hooks
-  pipenv run pre-commit install -t pre-commit -t pre-push
-
+  pipenv run init
 
 
 To activate the environment, again from the root directory of the repo:
@@ -32,3 +31,7 @@ Credits
 This package was created with Cookiecutter and the `aj-cloete/pipenv-cookiecutter <https://github.com/aj-cloete/pipenv-cookiecutter>`_ project template.
 
 .. |GitHub Test| image:: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/workflows/Test/badge.svg
+
+.. |Pre-Commit| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+   :target: https://github.com/pre-commit/pre-commit
+   :alt: pre-commit
