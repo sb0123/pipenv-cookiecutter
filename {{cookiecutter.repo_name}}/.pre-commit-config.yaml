@@ -13,6 +13,11 @@ repos:
   - id: trailing-whitespace
     exclude: 'docs/|setup.cfg'
 
+- repo: https://github.com/myint/docformatter.git
+  rev: master
+  hooks:
+    id: docformatter
+
 - repo: local
   hooks:
   - id: isort
