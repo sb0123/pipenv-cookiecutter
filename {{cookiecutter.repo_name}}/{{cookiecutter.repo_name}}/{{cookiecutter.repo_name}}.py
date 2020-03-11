@@ -5,7 +5,7 @@ The core module of the project
 """
 
 def fib(n: int) -> int:
-    """Fibonacci Number Generator
+    """Fibonacci Number Generator.
 
     This will give you the n'th number in the Fibonacci sequence
 
@@ -22,7 +22,7 @@ def fib(n: int) -> int:
 
 
 def fib_ratio(n):
-    """Fibonacci Ratio Generator
+    """Fibonacci Ratio Generator.
 
     This will give you the n'th ratio in the Fibonacci sequence
 
