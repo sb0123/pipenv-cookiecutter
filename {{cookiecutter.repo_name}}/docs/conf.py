@@ -48,12 +48,12 @@ extensions = [
 ]
 
 autodoc_default_flags = [
-        "members",
-        "inherited-members",
-        "private-members",
-        "show-inheritance",
+    "members",
+    "inherited-members",
+    "private-members",
+    "show-inheritance",
 ]
-autodoc_member_order = 'bysource'
+autodoc_member_order = "bysource"
 
 autosummary_generate = True
 napoleon_numpy_docstring = False  # Force consistency, leave only Google
