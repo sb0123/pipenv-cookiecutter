@@ -23,10 +23,10 @@ import os
 import sys
 
 try:
-    import best_practices
+    import {{cookiecutter.repo_name}}
 except Exception:
     sys.path.insert(0, os.path.abspath(".."))
-    import best_practices
+    import {{cookiecutter.repo_name}}
 
 # -- General configuration ---------------------------------------------
 
@@ -36,7 +36,28 @@ except Exception:
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named "sphinx.ext.*") or your custom ones.
-extensions = ["sphinx.ext.autodoc", "sphinx.ext.viewcode", "sphinx.ext.napoleon"]
+extensions = [
+    "sphinx.ext.autodoc",
+    "sphinx.ext.autosummary",
+    "sphinx.ext.coverage",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.inheritance_diagram",
+    "sphinx.ext.graphviz",
+    "sphinx.ext.napoleon",
+    "sphinx.ext.viewcode",
+]
+
+autodoc_default_flags = [
+        "members",
+        "inherited-members",
+        "private-members",
+        "show-inheritance",
+]
+autodoc_member_order = 'bysource'
+
+autosummary_generate = True
+napoleon_numpy_docstring = False  # Force consistency, leave only Google
+napoleon_use_rtype = False  # More legible
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
