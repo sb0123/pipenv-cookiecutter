@@ -4,6 +4,7 @@ Best Practices
 The core module of the project
 """
 
+
 def fib(n: int) -> int:
     """Fibonacci Number Generator.
 
