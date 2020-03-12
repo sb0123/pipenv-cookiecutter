@@ -1,7 +1,7 @@
 from click.testing import CliRunner
 
 from {{cookiecutter.repo_name}} import cli
-from {{cookiecutter.repo_name}}.{{cookiecutter.repo_name}} import fib, fib_ratio, MyClass
+from {{cookiecutter.repo_name}}.{{cookiecutter.repo_name}} import MyClass, fib, fib_ratio
 
 
 def test_fib() -> None:
