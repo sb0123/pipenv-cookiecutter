@@ -1,5 +1,5 @@
 """
-Best Practices
+{{ cookiecutter.project_name }}
 =========================================================
 The core module of the project
 """
@@ -41,7 +41,7 @@ def fib_ratio(n):
 class MyClass(object):
     """This is a whole new class!
 
-    This class is making classes great again.
+    This {{ cookiecutter.project_name }} class is making classes great again.
 
     Args:
         name (str): The name of this class
