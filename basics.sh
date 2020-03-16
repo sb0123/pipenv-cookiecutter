@@ -46,9 +46,9 @@
     && echo "\n-> packages installed from brew! <-\n"
 
     echo "\n-> installing software from homebrew casks:"
-    echo "   google-chrome mysqlworkbench slack sublime-text pipx" \
+    echo "   google-chrome lastpass mysqlworkbench pipx slack sublime-text whatsapp" \
     && (
-        brew cask install google-chrome mysqlworkbench slack sublime-text \
+        brew cask install google-chrome lastpass mysqlworkbench pipx slack sublime-text whatsapp \
         && pipx ensurepath && source ~/.zshrc
     # # Uncomment block if you want to install the microsoft stuff
     # echo "\n-> installing microsoft stuff from homebrew casks:"
