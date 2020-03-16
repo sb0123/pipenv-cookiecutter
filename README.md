@@ -13,7 +13,7 @@ Best practices [cookiecutter](https://github.com/audreyr/cookiecutter) template 
 - Continuous Integration with [GitHub Actions](https://github.com/features/actions)
 
 ## Quickstart
-Before you start, make sure you've covered [the basics](./the_basics.md).
+Before you start, make sure you've covered [the basics](./the_basics.md).  That link takes you to a neat writeup about steps to take to set up a fresh machine.  There is even a handy script [basics](./basics.sh) you can run.
 
 Install **pipx**
 ```
