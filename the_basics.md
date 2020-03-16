@@ -2,7 +2,9 @@
 
 If you have not installed the basics yet, here is a guide to set yourself up for success.
 This guide will be focussing on zsh, as this is now the default shell that ships with OS X.
+If you are still using bash, change all references to `zsh` to the appropriate version for bash, i.e. `~/.zshrc` becomes `~/.bashrc`.
 
+If you prefer just running a script without going through all the steps manually, see the (basics.sh)[./basics.sh] script.  You may need to run `chmod +x basics.sh` to be able to run it ( `./basics.sh` ).
 
 ## First things first: xcode
 In order to set your machine up for python development, you will need to have xcode installed.
