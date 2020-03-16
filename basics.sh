@@ -38,23 +38,23 @@
         then
             echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
         fi
-        if ! grep -Fxq 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' ~/.zshrc
+        if ! grep -Fxq 'if command -v pyenv 1>/dev/null 2>&1; then' ~/.zshrc
         then
-            echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
+            echo 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
         fi ) \
     && source ~/.zshrc \
     && echo "\n-> packages installed from brew! <-\n"
 
-    echo "\n-> installing from homebrew casks:"
-    # echo "   microsoft-edge microsoft-office microsoft-teams"
-    echo "   google-chrome mysqlworkbench sublime-text pipx"
-    (
-        # echo "--> microsoft" \
-        # && brew cask install microsoft-edge microsoft-office microsoft-teams
-        echo "--> other" \
-        && brew cask install google-chrome mysqlworkbench sublime-text
+    echo "\n-> installing software from homebrew casks:"
+    echo "   google-chrome mysqlworkbench slack sublime-text pipx" \
+    && (
+        brew cask install google-chrome mysqlworkbench slack sublime-text \
+        && pipx ensurepath && source ~/.zshrc
+    # # Uncomment block if you want to install the microsoft stuff
+    # echo "\n-> installing microsoft stuff from homebrew casks:"
+    # echo "   microsoft-edge microsoft-office microsoft-teams" \
+    # && brew cask install microsoft-edge microsoft-office microsoft-teams
     ) \
-    && pipx ensurepath && source ~/.zshrc \
     && echo "\n-> installation from homebrew casks successfull <-\n"
 
     echo "\n-> installing from pipx: "
@@ -70,6 +70,10 @@
     && git config --global init.templateDir ~/.git-template \
     && pre-commit init-templatedir ~/.git-template -t pre-commit -t pre-push \
     && echo "\n-> pre-commit configured <-"
+
+    echo "\nIf you don't yet know magnet for OSX, you're wasting time resizing windows!"
+    echo "Here's the link: https://apps.apple.com/gb/app/magnet/id441258766?mt=12"
+    open "https://apps.apple.com/gb/app/magnet/id441258766?mt=12"
 ) \
 && (
     echo "\n"
@@ -77,4 +81,4 @@
     echo "CLOSE ALL TERMINAL WINDOWS AND REOPEN TO ENSURE CORRECT PATH"
     echo "================== INSTALLATION COMPLETE! =================="
     echo "\n"
-) && osascript -e 'tell application "Terminal" to quit' || exit 1
+) && osascript -e 'tell application "Terminal" to quit' && exit 0 || exit 1
