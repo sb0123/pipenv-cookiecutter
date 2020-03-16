@@ -38,7 +38,7 @@
         then
             echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
         fi
-        if ! grep -Fxq 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi'
+        if ! grep -Fxq 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' ~/.zshrc
         then
             echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
         fi ) \
