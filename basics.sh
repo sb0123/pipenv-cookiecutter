@@ -29,6 +29,7 @@
         && brew install pipx pyenv
     ) \
     && (
+        touch ~/.zshrc
         if ! grep -Fxq 'export PYENV_ROOT="$HOME/.pyenv"' ~/.zshrc
         then
             echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
