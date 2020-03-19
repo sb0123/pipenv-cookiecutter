@@ -23,10 +23,10 @@
         fi \
         && echo "\n-> homebrew installed <-\n" \
         && echo "\n-> installing from brew:" \
-        && echo "     zsh python3 git htop openssl readline sqlite3 xz zlib pipx pyenv\n" \
-        && brew reinstall zsh python3 -f \
-        && brew reinstall git htop openssl readline sqlite3 xz zlib -f \
-        && brew reinstall pipx pyenv -f
+        && echo "     zsh python3 cmake git htop openssl readline sqlite3 xz zlib pipx pyenv\n" \
+        && brew reinstall zsh python3 cmake \
+        && brew reinstall git htop openssl readline sqlite3 xz zlib \
+        && brew reinstall pipx pyenv
     ) \
     && echo "\n-> packages installed from brew! <-\n"
 
@@ -92,4 +92,3 @@
     echo "================== INSTALLATION COMPLETE! =================="
     echo "\n"
 ) && osascript -e 'tell application "Terminal" to close (every window)' && exit 0 || exit 1
-
