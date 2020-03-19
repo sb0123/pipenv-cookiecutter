@@ -23,34 +23,35 @@
         fi \
         && echo "\n-> homebrew installed <-\n" \
         && echo "\n-> installing from brew:" \
-        && echo "     zsh python3 git htop openssl readline sqlite3 xz zlib pyenv\n" \
-        && brew install zsh python3 \
-        && brew install git htop openssl readline sqlite3 xz zlib \
-        && brew install pipx pyenv
+        && echo "     zsh python3 git htop openssl readline sqlite3 xz zlib pipx pyenv\n" \
+        && brew reinstall zsh python3 -f \
+        && brew reinstall git htop openssl readline sqlite3 xz zlib -f \
+        && brew reinstall pipx pyenv -f
     ) \
-    && (
-        touch ~/.zshrc
-        if ! grep -Fxq 'export PYENV_ROOT="$HOME/.pyenv"' ~/.zshrc
-        then
-            echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
-        fi 
-        if ! grep -Fxq 'export PATH="$PYENV_ROOT/bin:$PATH"' ~/.zshrc
-        then
-            echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
-        fi
-        if ! grep -Fxq 'if command -v pyenv 1>/dev/null 2>&1; then' ~/.zshrc
-        then
-            echo 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
-        fi ) \
-    && source ~/.zshrc \
     && echo "\n-> packages installed from brew! <-\n"
+
+    touch ~/.zshrc
+    if ! grep -Fxq 'export PYENV_ROOT="$HOME/.pyenv"' ~/.zshrc
+    then
+        echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+    fi
+    if ! grep -Fxq 'export PATH="$PYENV_ROOT:$PATH"' ~/.zshrc
+    then
+        echo 'export PATH="$PYENV_ROOT:$PATH"' >> ~/.zshrc
+    fi
+    if ! grep -Fxq 'if command -v pyenv 1>/dev/null 2>&1; then' ~/.zshrc
+    then
+        echo 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
+    fi
+    source ~/.zshrc \
 
     echo "\n-> installing software from homebrew casks:"
     echo "   google-chrome lastpass mysqlworkbench pipx slack sublime-text whatsapp" \
     && (
         brew cask install authy google-chrome lastpass mysqlworkbench \
-        && brew cask install pipx slack sublime-text whatsapp \
-        && pipx ensurepath && source ~/.zshrc
+        && brew cask install slack sublime-text whatsapp
+        pipx ensurepath \
+        && source ~/.zshrc
     # # Uncomment block if you want to install the microsoft stuff
     # echo "\n-> installing microsoft stuff from homebrew casks:"
     # echo "   microsoft-edge microsoft-office microsoft-teams" \
@@ -59,13 +60,14 @@
     && echo "\n-> installation from homebrew casks successfull <-\n"
 
     echo "\n-> installing from pipx: "
-    echo "   pipenv pipenv-pipes pipenv-setup pre-commit" \
-    && (
+    echo "   pipenv pipenv-pipes pipenv-setup pre-commit"
+    (
         pipx install pipenv \
         && pipx install pipenv-pipes \
         && pipx install pipenv-setup \
         && pipx install pre-commit
     ) \
+    && source ~/.zshrc \
     && echo "\n-> pipx installations complete <-" \
     && echo "\n-> configuring git to run pre-commit hooks, when found, automatically:" \
     && git config --global init.templateDir ~/.git-template \
@@ -74,7 +76,14 @@
 
     echo "\nIf you don't yet know magnet for OSX, you're wasting time resizing windows!"
     echo "Here's the link: https://apps.apple.com/gb/app/magnet/id441258766?mt=12"
-    open "https://apps.apple.com/gb/app/magnet/id441258766?mt=12"
+    read -p "Do you want to open that link now? [y/n]" -t 5 REPLY
+    case $REPLY in
+        [yY])
+            open "https://apps.apple.com/gb/app/magnet/id441258766?mt=12"
+        ;;
+        *)
+        ;;
+    esac
 ) \
 && (
     echo "\n"
@@ -82,4 +91,5 @@
     echo "CLOSE ALL TERMINAL WINDOWS AND REOPEN TO ENSURE CORRECT PATH"
     echo "================== INSTALLATION COMPLETE! =================="
     echo "\n"
-) && osascript -e 'tell application "Terminal" to quit' && exit 0 || exit 1
+) && osascript -e 'tell application "Terminal" to close (every window)' && exit 0 || exit 1
+
