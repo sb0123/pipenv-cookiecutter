@@ -23,9 +23,9 @@
         fi \
         && echo "\n-> homebrew installed <-\n" \
         && echo "\n-> installing from brew:" \
-        && echo "     zsh python3 cmake git htop openssl readline sqlite3 xz zlib pipx pyenv\n" \
+        && echo "     zsh python3 cmake git htop openssl readline sqlite3 tree xz zlib pipx pyenv\n" \
         && brew reinstall zsh python3 cmake \
-        && brew reinstall git htop openssl readline sqlite3 xz zlib \
+        && brew reinstall git htop openssl readline sqlite3 tree xz zlib \
         && brew reinstall pipx pyenv
     ) \
     && echo "\n-> packages installed from brew! <-\n"
@@ -46,16 +46,17 @@
     source ~/.zshrc \
 
     echo "\n-> installing software from homebrew casks:"
-    echo "   google-chrome lastpass mysqlworkbench pipx slack sublime-text whatsapp" \
-    && (
-        brew cask install authy google-chrome lastpass mysqlworkbench \
-        && brew cask install slack sublime-text whatsapp
-        pipx ensurepath \
-        && source ~/.zshrc
-    # # Uncomment block if you want to install the microsoft stuff
-    # echo "\n-> installing microsoft stuff from homebrew casks:"
-    # echo "   microsoft-edge microsoft-office microsoft-teams" \
-    # && brew cask install microsoft-edge microsoft-office microsoft-teams
+    echo "   google-chrome lastpass mysqlworkbench slack sublime-text the-unarchiver whatsapp"
+    (
+        brew cask reinstall authy google-chrome lastpass mysqlworkbench \
+        brew cask reinstall slack sublime-text the-unarchiver 
+        brew cask reinstall whatsapp
+        pipx ensurepath && source ~/.zshrc
+#         # Uncomment block if you want to install the microsoft stuff
+#         echo "\n-> installing microsoft stuff from homebrew casks:"
+#         echo "   microsoft-edge microsoft-office microsoft-teams"
+#         brew cask reinstall microsoft-edge microsoft-office microsoft-teams
+#         brew cask reinstall drawio
     ) \
     && echo "\n-> installation from homebrew casks successfull <-\n"
 
