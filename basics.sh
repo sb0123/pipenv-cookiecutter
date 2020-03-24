@@ -23,9 +23,9 @@
         fi \
         && echo "\n-> homebrew installed <-\n" \
         && echo "\n-> installing from brew:" \
-        && echo "     zsh python3 cmake git htop openssl readline sqlite3 tree xz zlib pipx pyenv\n" \
+        && echo "     zsh python3 cmake git htop openssl readline sqlite3 tree unar xz zlib pipx pyenv\n" \
         && brew reinstall zsh python3 cmake \
-        && brew reinstall git htop openssl readline sqlite3 tree xz zlib \
+        && brew reinstall git htop openssl readline sqlite3 tree unar xz zlib \
         && brew reinstall pipx pyenv
     ) \
     && echo "\n-> packages installed from brew! <-\n"
