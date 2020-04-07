@@ -100,4 +100,28 @@ git push -u origin master
 # Pushes the changes in your local repository up to the remote repository you specified as the origin
 ```
 
+## Failed tests
+Each time a test fails at the push stage, the packages will likely implement a set of improvements to your code which will then need to be manually re-added and committed. 
+To do this, you simply need to go through the push process again:
+1. Check what's been changed
+```
+git diff
+# See what's changed
+
+git status
+# Check the overall status of unstaged commits
+```
+2. Repeat the add and commit process
+```
+git add .
+# If you're happy, add all changes to the commit
+# Alternatively, add specific files by git add <filename>
+
+git commit -m "Your message"
+# Commit
+
+git push -u origin master OR git push (if you have successfully ran the first push command already)
+# Push, as above
+```
+
 **You're all set! Happy coding!**
