@@ -69,7 +69,7 @@ pipenv shell
 Now that you have the repo set up locally, you will want to push to some remote of your choice (Github, Gitlab, etc.)
 Follow these steps to get that done:
 1.  Create a new repository on your online platform.
-> To avoid errors, do not initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to GitHub.
+> To avoid errors, do not initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to your remote of choice (GitHub, GitLab, etc...).
 2.  Open Terminal and change the current working directory to your local project.
 3.  Initialize the local directory as a Git repository.
 ```
