@@ -49,7 +49,7 @@
     echo "   google-chrome lastpass mysqlworkbench slack sublime-text the-unarchiver whatsapp"
     (
         brew cask reinstall authy google-chrome lastpass mysqlworkbench \
-        brew cask reinstall slack sublime-text the-unarchiver 
+        brew cask reinstall slack sublime-text the-unarchiver \
         brew cask reinstall whatsapp
         pipx ensurepath && source ~/.zshrc
 #         # Uncomment block if you want to install the microsoft stuff
