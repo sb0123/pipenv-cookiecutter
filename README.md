@@ -37,7 +37,7 @@ Use **cookiecutter to create project** from this template.
 
 Running the following command will ask you a series of questions, including the name of the project and your github username, so make sure you have those handy.
 ```
-pipx run cookiecutter gh:aj-cloete/pipenv-cookiecutter
+pipx run cookiecutter gh:anmut-consulting/pipenv-cookiecutter
 ```
 
 Enter project directory

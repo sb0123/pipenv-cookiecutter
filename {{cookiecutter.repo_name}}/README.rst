@@ -28,7 +28,7 @@ To activate the environment, again from the root directory of the repo:
 Credits
 =======
 
-This package was created with Cookiecutter and the `aj-cloete/pipenv-cookiecutter <https://github.com/aj-cloete/pipenv-cookiecutter>`_ project template.
+This package was created with Cookiecutter and the `aj-cloete/pipenv-cookiecutter <https://github.com/anmut-consulting/pipenv-cookiecutter>`_ project template.
 
 .. |GitHub Test| image:: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/workflows/Test/badge.svg
    :target: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/actions

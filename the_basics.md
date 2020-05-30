@@ -130,4 +130,4 @@ exit
 Close your terminal window (in fact, close all your terminal windows and quit terminal) and then relaunch terminal.
 
 ## Done!
-If you followed all of the steps above to the tee - well done! Give yourself a pat on the back and rest assured that things ought to work as expected.  If I've missed anything in this guide and you're still having trouble, please let me know by [creating a ticket](https://github.com/aj-cloete/pipenv-cookiecutter/issues/new).
+If you followed all of the steps above to the tee - well done! Give yourself a pat on the back and rest assured that things ought to work as expected.  If I've missed anything in this guide and you're still having trouble, please let me know by [creating a ticket](https://github.com/anmut-consulting/pipenv-cookiecutter/issues/new).

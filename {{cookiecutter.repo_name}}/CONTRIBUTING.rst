@@ -60,7 +60,7 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.repo_name }}` for loc
 
     git clone git@github.com:{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git
 
-2. Create a pipenv environment (assuming you have the `basics <https://github.com/aj-cloete/pipenv-cookiecutter/blob/master/the_basics.md>`_ covered) ::
+2. Create a pipenv environment (assuming you have the `basics <https://github.com/anmut-consulting/pipenv-cookiecutter/blob/master/the_basics.md>`_ covered) ::
 
     cd {{ cookiecutter.repo_name }}
     pipenv install --dev
