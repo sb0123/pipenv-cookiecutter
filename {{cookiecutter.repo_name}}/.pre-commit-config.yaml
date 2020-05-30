@@ -3,6 +3,9 @@ repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks.git
   rev: master
   hooks:
+  - id: no-commit-to-branch
+    name: Check not master branch
+    args: ['--branch', 'master']
   - id: check-added-large-files
   - id: check-merge-conflict
   - id: detect-aws-credentials
@@ -12,8 +15,6 @@ repos:
     exclude: 'docs/|setup.cfg'
   - id: trailing-whitespace
     exclude: 'docs/|setup.cfg'
-  - id: no-commit-to-branch
-    args: ['--branch', 'master']
 
 - repo: https://github.com/myint/docformatter.git
   rev: master
