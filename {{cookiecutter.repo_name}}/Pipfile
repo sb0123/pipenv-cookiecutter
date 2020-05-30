@@ -7,7 +7,6 @@ verify_ssl = true
 python_version = "{{ cookiecutter.python_version }}"
 
 [packages]
-{% if cookiecutter.command_line_interface|lower == "click" %}click = ">=6.0"{%- endif %}
 
 [dev-packages]
 black = "==19.3b0"
