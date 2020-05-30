@@ -1,6 +1,3 @@
-from click.testing import CliRunner
-
-from {{cookiecutter.repo_name}} import cli
 from {{cookiecutter.repo_name}}.{{cookiecutter.repo_name}} import MyClass, fib, fib_ratio
 
 
@@ -18,12 +15,6 @@ def test_fib_ratio() -> None:
     assert fib_ratio(0) == 0
     assert fib_ratio(1) == 1
     assert fib_ratio(2) == 1.0
-
-
-def test_cli() -> None:
-    runner = CliRunner()
-    result = runner.invoke(cli.main)
-    assert result.exit_code == 0
 
 
 def test_myclass() -> None:
