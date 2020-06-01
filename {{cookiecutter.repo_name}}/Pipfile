@@ -19,6 +19,7 @@ pytest = "*"
 pytest-cov = "*"
 sphinx = "*"
 jupyter = "*"
+jupyterlab = "*"
 ipython = "*"
 
 [scripts]
@@ -30,3 +31,4 @@ test = "pipenv run pytest"
 make_docs = "pipenv run $SHELL scripts/make_docs.sh"
 release = "pipenv run $SHELL scripts/git-release.sh"
 create_ipykernel = "pipenv run python -m ipykernel install --name {{ cookiecutter.repo_name }} --display-name \"{{ cookiecutter.project_name }}\" "
+remove_ipykernel = "pipenv run jupyter kernelspec remove {{ cookiecutter.repo_name }} "
