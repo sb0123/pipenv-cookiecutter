@@ -156,3 +156,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Jupyter notebooks - add manually as needed
+*.ipynb
