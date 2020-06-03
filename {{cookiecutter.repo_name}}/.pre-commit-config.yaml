@@ -81,7 +81,7 @@ repos:
     name: "pytest coverage"
     stages: [push]
     language: system
-    entry: pipenv run pytest --cov --cov-fail-under=100 --cov-report term:skip-covered
+    entry: coverage = pipenv run pytest --cov --cov-fail-under=100 --cov-report term-missing:skip-covered
     types: [python]
     pass_filenames: false
 
