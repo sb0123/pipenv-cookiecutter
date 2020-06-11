@@ -49,7 +49,7 @@ setup(
     include_package_data=True,
     keywords="{{ cookiecutter.repo_name }}",
     name="{{ cookiecutter.repo_name }}",
-    packages=find_packages(include=["{{ cookiecutter.repo_name }}"]),
+    packages=find_packages(include=["{{ cookiecutter.repo_name }}*"]),
     setup_requires=setup_requirements,
     test_suite="tests",
     tests_require=test_requirements,
