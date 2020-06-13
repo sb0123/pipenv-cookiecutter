@@ -18,9 +18,11 @@ pre-commit = "*"
 pytest = "*"
 pytest-cov = "*"
 sphinx = "*"
+sphinx-rtd-theme = "*"
 jupyter = "*"
 jupyterlab = "*"
 ipython = "*"
+
 
 [scripts]
 init = "pipenv run $SHELL scripts/init.sh"
