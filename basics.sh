@@ -48,7 +48,7 @@
     echo "\n-> installing software from homebrew casks:"
     echo "   google-chrome lastpass mysqlworkbench slack sublime-text the-unarchiver whatsapp"
     (
-        brew cask reinstall authy google-chrome lastpass mysqlworkbench
+        brew cask reinstall authy avast-security google-chrome lastpass mysqlworkbench
         brew cask reinstall slack sublime-text the-unarchiver
         brew cask reinstall whatsapp
         pipx ensurepath && source ~/.zshrc
