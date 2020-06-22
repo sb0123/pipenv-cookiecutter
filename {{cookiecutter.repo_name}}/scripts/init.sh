@@ -1,6 +1,10 @@
 echo "-> initialise git repo"
 git init
 
+echo "-> running pipenv install --dev" \
+pipenv install --dev \
+echo "-> installed developer environment <-"
+
 echo "-> set git to follow tags on push"
 git config push.followTags true
 
@@ -16,10 +20,10 @@ echo "-> creating initial commit in master" \
 	|| echo "WARNING: problem with remote.  Please verify.") \
 && echo "Creating 'latest' tag" \
 && git tag -f lastest \
-&& git push -u origin/master --no-verify --tags \
+&& git push -u origin master --no-verify --tags \
 && echo "  -> adding dev branch" \
 && git checkout -b dev \
-&& git push -u origin/dev
+&& git push -u origin dev
 
 echo
 echo "#################################################"
