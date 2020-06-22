@@ -2,7 +2,7 @@ echo "-> initialise git repo"
 git init
 
 echo "-> running pipenv install --dev" \
-pipenv install --dev \
+&& pipenv install --dev \
 echo "-> installed developer environment <-"
 
 echo "-> set git to follow tags on push"
