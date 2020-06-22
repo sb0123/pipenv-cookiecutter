@@ -3,7 +3,7 @@ git init
 
 echo "-> running pipenv install --dev" \
 && pipenv install --dev \
-echo "-> installed developer environment <-"
+&& echo "-> installed developer environment <-"
 
 echo "-> set git to follow tags on push"
 git config push.followTags true
