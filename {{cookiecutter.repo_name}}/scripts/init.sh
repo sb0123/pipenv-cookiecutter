@@ -25,6 +25,9 @@ echo "-> creating initial commit in master" \
 && git checkout -b dev \
 && git push -u origin dev
 
+echo "Creating ipython kernel for use with Jupyter"
+pipenv run create_ipykernel
+
 echo
 echo "#################################################"
 echo "REPO FULLY INITIALISED! You're set up to develop."
