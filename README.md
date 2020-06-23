@@ -31,11 +31,15 @@ Install **cookiecutter** using pipx
 ```
 pipx install cookiecutter
 ```
+
+## Using Cookiecutter
 Use **cookiecutter to create project** from this template.  
+*Ensure you have creatd your GitHub repo **before** you run the following command.  You will be asked for the `repo_name` of the GitHub project.  Make sure you enter the name verbatim.*
+
+Running the following command will ask you a series of questions.  Please leave the github username on the default (anmut-consulting) to avoid running into problems with adding the remote.  The `project_name` can be fully punctuated, i.e. "My Project", but please ensure you use an [import friendly](https://www.python.org/dev/peps/pep-0008/#id40) name for your `repo_name`.
+
 *The folder will be created in the working directory (`pwd`) so make sure you `cd` to where you want to be.*
 > I use `~/dev/` for my development projects.
-
-Running the following command will ask you a series of questions, including the name of the project and your github username, so make sure you have those handy.
 ```
 pipx run cookiecutter gh:anmut-consulting/pipenv-cookiecutter
 ```
@@ -45,31 +49,20 @@ Enter project directory
 cd <repo_name>
 ```
 
-Initialise git repo
+Once in the newly-generated folder, simply run the following: ([see here for details](./{{cookiecutter.repo_name}}/scripts/init.sh))
 ```
-git init
+pipenv run init
 ```
-
-Install dependencies
-```
-pipenv install --dev
-```
-
-Setup pre-commit and pre-push hooks
-```
-pipenv run pre-commit install -t pre-commit -t pre-push
-```
-
-Remeber to actually activate the environment when you want to interact with the code! From the root folder of the repo:
+Finally, remeber to actually activate the environment when you want to interact with the code! From the same newly-created folder:
 ```
 pipenv shell
 ```
 
 ## Link to Remote repo
-Now that you have the repo set up locally, you will want to push to some remote of your choice (Github, Gitlab, etc.)
-Follow these steps to get that done:
+The init script takes care of setting up the remote (if you followed the instructions).  If something went wrong, here's how to do it manually:
+
 1.  Create a new repository on your online platform.
-> To avoid errors, do not initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to your remote of choice (GitHub, GitLab, etc...).
+> To avoid errors, **do not** initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to your remote of choice (GitHub, GitLab, etc...).
 2.  Open Terminal and change the current working directory to your local project.
 3.  Initialize the local directory as a Git repository.
 ```
@@ -87,6 +80,7 @@ git commit -m "First commit"
 # Commits the tracked changes and prepares them to be pushed to a remote repository. 
 # To remove this commit and modify the file, use 'git reset --soft HEAD~1' and commit and add the file again.
 ```
+> You will get an error if you are in master.  If you want to circumvent the test, use the `--no-verify` flag in the `git commit` and the `git push` commands.
 6.  In Terminal, add the URL for the remote repository where your local repository will be pushed.
 ```
 git remote add origin <remote repository URL>
