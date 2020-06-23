@@ -3,7 +3,7 @@ git init
 
 echo "-> running pipenv install --dev" \
 && pipenv install --dev \
-echo "-> installed developer environment <-"
+&& echo "-> installed developer environment <-"
 
 echo "-> set git to follow tags on push"
 git config push.followTags true
@@ -19,7 +19,7 @@ echo "-> creating initial commit in master" \
 	git remote add origin git@github.com:anmut-consulting/{{ cookiecutter.repo_name }}.git \
 	|| echo "WARNING: problem with remote.  Please verify.") \
 && echo "Creating 'latest' tag" \
-&& git tag -f lastest \
+&& git tag -f latest \
 && git push -u origin master --no-verify --tags \
 && echo "  -> adding dev branch" \
 && git checkout -b dev \
