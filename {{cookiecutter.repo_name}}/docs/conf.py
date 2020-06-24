@@ -50,7 +50,8 @@ extensions = [
 
 autoapi_dirs = ["../{{cookiecutter.repo_name}}"]
 autoapi_keep_files = True
-autoapi_generate_api_docs = False
+autoapi_generate_api_docs = True
+autoapi_ignore = ["*migrations*", "*ipynb_checkpoints*"]
 
 autodoc_default_flags = [
     "members",
