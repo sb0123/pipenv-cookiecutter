@@ -25,6 +25,26 @@ To activate the environment, again from the root directory of the repo:
   pipenv shell
 
 
+Setup
+=====
+
+The preferred way to install this repo is via SSH.  This command will install the latest version of `Data Condition`, provided you have `SSH set up on GitHub`_.
+
+.. code-block:: console
+
+    $ pip install git+ssh://git@github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git@latest
+
+.. seealso::
+
+	For more detailed installation instructions, see :ref:`installation`
+
+.. _SSH set up on GitHub: https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
+
+To activate the environment, again from the root directory of the repo:
+::
+
+  pipenv shell
+
 Credits
 =======
 

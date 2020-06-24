@@ -11,6 +11,7 @@ Welcome to {{ cookiecutter.project_name }}'s documentation!
    contributing
    {% if cookiecutter.create_author_file == 'y' -%}authors
    {% endif -%}history
+   todo
    API Reference <autoapi/index>
 
 Indices and tables

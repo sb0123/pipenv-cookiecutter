@@ -1,5 +1,7 @@
 .. highlight:: shell
 
+.. _installation:
+
 ============
 Installation
 ============
@@ -12,7 +14,7 @@ To install {{ cookiecutter.project_name }}, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install {{ cookiecutter.repo_name }}
+    $ pip install git+ssh://git@github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git@latest
 
 This is the preferred method to install {{ cookiecutter.project_name }}, as it will always install the most recent stable release.
 
