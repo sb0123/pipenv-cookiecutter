@@ -18,6 +18,11 @@ To install {{ cookiecutter.project_name }}, run this command in your terminal:
 
 This is the preferred method to install {{ cookiecutter.project_name }}, as it will always install the most recent stable release.
 
+If you're using **pipenv** for your virtual environment and you'd like to install from the repo, the command becomes (notice the ``#egg={{ cookiecutter.repo_name }}`` section)::
+
+    $ pipenv install git+ssh://git@github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git@latest#egg={{ cookiecutter.repo_name }}
+
+
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
 
@@ -40,7 +45,7 @@ Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl  -OL https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/tarball/master
+    $ curl  -OL https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/tarball/latest
 
 Once you have a copy of the source, you can install it with:
 
@@ -50,4 +55,4 @@ Once you have a copy of the source, you can install it with:
 
 
 .. _Github repo: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
-.. _tarball: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/tarball/master
+.. _tarball: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/tarball/latest

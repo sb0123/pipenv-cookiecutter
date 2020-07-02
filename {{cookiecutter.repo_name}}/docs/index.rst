@@ -2,6 +2,7 @@ Welcome to {{ cookiecutter.project_name }}'s documentation!
 ================================================================================================
 
 .. toctree::
+   :glob:
    :maxdepth: 2
    :caption: Contents:
 

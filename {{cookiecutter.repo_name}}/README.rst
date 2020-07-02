@@ -9,25 +9,6 @@
 Setup
 =====
 
-Before you do anything else, run the following from the root directory of the repo:
-::
-
-  # Install dependencies
-  pipenv install --dev
-
-  # Setup pre-commit and pre-push hooks
-  pipenv run init
-
-
-To activate the environment, again from the root directory of the repo:
-::
-
-  pipenv shell
-
-
-Setup
-=====
-
 The preferred way to install this repo is via SSH.  This command will install the latest version of `Data Condition`, provided you have `SSH set up on GitHub`_.
 
 .. code-block:: console

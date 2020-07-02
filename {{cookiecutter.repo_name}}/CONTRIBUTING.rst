@@ -60,29 +60,38 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.repo_name }}` for loc
 
 1. Clone the `{{ cookiecutter.repo_name }}` repo on GitHub.::
 
-    git clone git@github.com:{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git
+    $ git clone git@github.com:{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git
 
 2. Create a pipenv environment (assuming you have the `basics <https://github.com/anmut-consulting/pipenv-cookiecutter/blob/master/the_basics.md>`_ covered) ::
 
-    cd {{ cookiecutter.repo_name }}
-    pipenv install --dev
-    pipenv run pre-commit install
+    $ cd {{ cookiecutter.repo_name }}
+    $ pipenv run init
 
 3. Activate your environment shell. ::
 
-    pipenv shell
+    $ pipenv shell
 
 4. Create a branch for local development::
 
-    git checkout -b name-of-your-bugfix-or-feature
+    $ git checkout -b name-of-your-bugfix-or-feature
 
-   Now you can make your changes locally.
+Now you can make your changes locally.
 
 5. When you're done making changes, check that your changes pass all the tests by running::
 
-    pipenv run pytest
-    pipenv run pytest --cov --cov-fail-under=100
-    pipenv run pipenv check
+    # to run the pre-commit hooks only, run:
+    $ pipenv run tests
+    # or
+    $ pipenv run commit_test
+
+    # to run coverage test only, run:
+    $ pipenv run coverage
+
+    # to run the pre-commit PUSH hooks, run:
+    $ pipenv run push_test
+
+    # to make the documentation, run:
+    $ pipenv run make_docs
 
 6. Commit your changes and push your branch to GitHub::
 
@@ -106,15 +115,15 @@ Before you submit a pull request, check that it meets these guidelines:
 Tips
 ----
 
-You can check the command next to each of the **entry:** lines in `this file </.pre-commit-config.yaml>`_ to understand what each of the individual pre-commit hooks runs.
+You can check the command next to each of the **entry:** lines in :file:`.pre-commit-config.yaml` to understand what each of the individual pre-commit hooks runs.
+
+Check the [scripts] section in :file:`Pipfile` to see the shortcuts you can run with ``$ pipenv run ..``, i.e. ``$ pipenv run coverage``.
 
 Deploying
 ---------
 
 A reminder for the maintainers on how to deploy.
-Make sure all your changes are committed (including an entry in HISTORY.rst).
+Make sure all your changes are committed (including an entry in :file:`HISTORY.rst`).
 Then run::
 
-  bumpversion patch # possible: major / minor / patch
-  git push
-  git push --tags
+  $ pipenv run release [major/minor/patch]

@@ -45,6 +45,7 @@ extensions = [
     "sphinx.ext.inheritance_diagram",
     "sphinx.ext.graphviz",
     "sphinx.ext.napoleon",
+    "sphinx.ext.todo",
     "sphinx.ext.viewcode",
 ]
 
@@ -53,15 +54,22 @@ autoapi_keep_files = True
 autoapi_generate_api_docs = True
 autoapi_ignore = ["*migrations*", "*ipynb_checkpoints*"]
 
-autodoc_default_flags = [
-    "members",
-    "inherited-members",
-    "private-members",
-    "show-inheritance",
-]
-autodoc_member_order = "bysource"
+# Todo section
+todo_include_todos = True
+todo_link_only = True
 
-autosummary_generate = True
+# # Autodoc settings - superceded by autoapi 
+# # but could still be useful to document a specific section only
+# autodoc_default_flags = [
+#     "members",
+#     "inherited-members",
+#     "private-members",
+#     "show-inheritance",
+# ]
+# autodoc_member_order = "bysource"
+
+# autosummary_generate = True
+
 napoleon_numpy_docstring = False  # Force consistency, leave only Google
 napoleon_use_rtype = False  # More legible
 
@@ -80,6 +88,9 @@ master_doc = "index"
 project = u"{{ cookiecutter.project_name }}"
 copyright = u"{% now "local", "%Y" %}, {{ cookiecutter.full_name }}"
 author = u"{{ cookiecutter.full_name }}"
+
+# Show the source code:
+viewcode_follow_imported_members = True
 
 # The version info for the project you're documenting, acts as replacement
 # for |version| and |release|, also used in various other places throughout
