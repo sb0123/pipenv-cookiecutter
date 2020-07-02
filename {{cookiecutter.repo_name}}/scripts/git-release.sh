@@ -1,5 +1,7 @@
 ( echo "\n-> Tagging $1 release\n" \
   && pipenv run bumpversion $1 --verbose \
+  && echo "Creating 'latest' tag" \
+  && git tag -f latest \
   && echo "\n-> make documentation\n" \
   && pipenv run make_docs \
   && echo "\n-> docs made! use `open docs/_build/html/index.html` to view")
