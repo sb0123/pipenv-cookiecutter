@@ -15,6 +15,9 @@ echo "-> initialise local git repo"
 
     echo "-> running preliminary tests"
     pipenv run tests
+
+    echo "Creating ipython kernel for use with Jupyter"
+    pipenv run create_ipykernel
 } \
 && {
     echo "-> installed developer environment <-"

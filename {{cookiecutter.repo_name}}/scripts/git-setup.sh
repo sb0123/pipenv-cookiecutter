@@ -13,12 +13,10 @@
 && git push -u origin master --no-verify --tags \
 && echo "  -> adding dev branch" \
 && git checkout -b dev \
-&& git push -u origin dev
-
-echo "Creating ipython kernel for use with Jupyter"
-pipenv run create_ipykernel
-
-echo
-echo "#################################################"
-echo "GIT SETUP COMPLEte! You're set up to develop.  Please note you're now on the dev branch"
-echo "#################################################"
+&& git push -u origin dev \
+&& {
+    echo
+    echo "#################################################"
+    echo "GIT SETUP COMPLEte! You're set up to develop.  Please note you're now on the dev branch"
+    echo "#################################################"
+}
