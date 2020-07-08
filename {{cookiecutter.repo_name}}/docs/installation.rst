@@ -14,13 +14,13 @@ To install {{ cookiecutter.project_name }}, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install git+ssh://git@github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git@latest
+    $ pip install git+ssh://git@github.com/anmut-consulting/{{ cookiecutter.repo_name }}.git@latest
 
 This is the preferred method to install {{ cookiecutter.project_name }}, as it will always install the most recent stable release.
 
 If you're using **pipenv** for your virtual environment and you'd like to install from the repo, the command becomes (notice the ``#egg={{ cookiecutter.repo_name }}`` section)::
 
-    $ pipenv install git+ssh://git@github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git@latest#egg={{ cookiecutter.repo_name }}
+    $ pipenv install git+ssh://git@github.com/anmut-consulting/{{ cookiecutter.repo_name }}.git@latest#egg={{ cookiecutter.repo_name }}
 
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
@@ -39,13 +39,13 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
+    $ git clone git://github.com/anmut-consulting/{{ cookiecutter.repo_name }}
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl  -OL https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/tarball/latest
+    $ curl  -OL https://github.com/anmut-consulting/{{ cookiecutter.repo_name }}/tarball/latest
 
 Once you have a copy of the source, you can install it with:
 
@@ -54,5 +54,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
-.. _tarball: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/tarball/latest
+.. _Github repo: https://github.com/anmut-consulting/{{ cookiecutter.repo_name }}
+.. _tarball: https://github.com/anmut-consulting/{{ cookiecutter.repo_name }}/tarball/latest

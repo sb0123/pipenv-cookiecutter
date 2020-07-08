@@ -1,13 +1,10 @@
 {
   "full_name": "Anmut Consulting",
   "email": "data.science@anmut.co.uk",
-  "github_username": "anmut-consulting",
   "project_name": "{{ cookiecutter.full_name }} Project X",
   "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "project_short_description": "{{ cookiecutter.project_name }} solves all the problems.",
   "python_version": "3.8",
   "version": "0.0.1",
-  "use_pytest": "y",
-  "create_author_file": "y",
   "open_source_license": ["Not open source", "MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3"]
 }

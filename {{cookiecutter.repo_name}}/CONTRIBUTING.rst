@@ -17,7 +17,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/issues.
+Report bugs at https://github.com/anmut-consulting/{{ cookiecutter.repo_name }}/issues.
 
 If you are reporting a bug, please include:
 
@@ -46,7 +46,7 @@ official {{ cookiecutter.project_name }} docs and in docstrings.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/issues.
+The best way to send feedback is to file an issue at https://github.com/anmut-consulting/{{ cookiecutter.repo_name }}/issues.
 
 If you are proposing a feature:
 
@@ -60,7 +60,7 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.repo_name }}` for loc
 
 1. Clone the `{{ cookiecutter.repo_name }}` repo on GitHub.::
 
-    $ git clone git@github.com:{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git
+    $ git clone git@github.com:anmut-consulting/{{ cookiecutter.repo_name }}.git
 
 2. Create a pipenv environment (assuming you have the `basics <https://github.com/anmut-consulting/pipenv-cookiecutter/blob/master/the_basics.md>`_ covered) ::
 

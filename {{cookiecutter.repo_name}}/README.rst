@@ -13,7 +13,7 @@ The preferred way to install this repo is via SSH.  This command will install th
 
 .. code-block:: console
 
-    $ pip install git+ssh://git@github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}.git@latest
+    $ pip install git+ssh://git@github.com/anmut-consulting/{{ cookiecutter.repo_name }}.git@latest
 
 .. seealso::
 

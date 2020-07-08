@@ -86,8 +86,8 @@ master_doc = "index"
 
 # General information about the project.
 project = u"{{ cookiecutter.project_name }}"
-copyright = u"{% now "local", "%Y" %}, {{ cookiecutter.full_name }}"
-author = u"{{ cookiecutter.full_name }}"
+copyright = u"{% now "local", "%Y" %}, Anmut Consulting"
+author = u"Anmut Consulting"
 
 # Show the source code:
 viewcode_follow_imported_members = True
@@ -173,7 +173,7 @@ latex_documents = [
         master_doc,
         "{{ cookiecutter.repo_name }}.tex",
         u"{{ cookiecutter.project_name }} Documentation",
-        u"{{ cookiecutter.full_name }}",
+        u"Anmut Consulting",
         "manual",
     )
 ]
