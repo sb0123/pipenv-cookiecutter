@@ -161,3 +161,7 @@ Temporary Items
 
 # Jupyter notebooks - add manually as needed
 *.ipynb
+
+# PyCharm artefacts
+.idea*
+out/*
