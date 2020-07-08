@@ -1,35 +1,27 @@
-echo "-> initialise git repo"
-git init
+#!/bin/sh
+set -x
+echo "-> initialise local git repo"
+{
+    git init
+    echo "-> running pipenv install --dev"
+    pipenv install --dev
 
-echo "-> running pipenv install --dev" \
-&& pipenv install --dev \
-&& echo "-> installed developer environment <-"
+    echo "-> set git to follow tags on push"
+    git config push.followTags true
 
-echo "-> set git to follow tags on push"
-git config push.followTags true
+    echo "-> configure git hooks"
+    pre-commit install -t pre-commit
+    pre-commit install -t pre-push
 
-echo "-> configure git hooks"
-pre-commit install -t pre-commit
-pre-commit install -t pre-push
+    echo "-> running preliminary tests"
+    pipenv run tests
+} \
+&& {
+    echo "-> installed developer environment <-"
+    echo "#################################################"
+    echo "REPO FULLY INITIALISED! You're set up to develop."
 
-echo "-> creating initial commit in master" \
-&& pipenv run tests \
-&& git add . \
-&& git commit -m "initial commit" --no-verify \
-&& (
-	git remote add origin git@github.com:anmut-consulting/{{ cookiecutter.repo_name }}.git \
-	|| echo "WARNING: problem with remote.  Please verify.") \
-&& echo "Creating 'latest' tag" \
-&& git tag -f latest \
-&& git push -u origin master --no-verify --tags \
-&& echo "  -> adding dev branch" \
-&& git checkout -b dev \
-&& git push -u origin dev
-
-echo "Creating ipython kernel for use with Jupyter"
-pipenv run create_ipykernel
-
-echo
-echo "#################################################"
-echo "REPO FULLY INITIALISED! You're set up to develop."
-echo "#################################################"
+    echo "If this is a brand new project, consider running the git-init script:"
+    echo "'pipenv run git_setup' to set up the branches and tags"
+    echo "#################################################"
+}
