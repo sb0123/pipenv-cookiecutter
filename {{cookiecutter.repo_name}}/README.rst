@@ -52,7 +52,7 @@ To deactivate the environment again, simply run::
 Credits
 =======
 
-This package was created with Cookiecutter and the `aj-cloete/pipenv-cookiecutter <https://github.com/anmut-consulting/pipenv-cookiecutter>`_ project template.
+This package was created with `Cookiecutter <https://cookiecutter.readthedocs.io>`_ and the `anmut-consulting/pipenv-cookiecutter <https://github.com/anmut-consulting/pipenv-cookiecutter>`_ project template.
 
 .. |GitHub Test| image:: https://github.com/anmut-consulting/{{cookiecutter.repo_name}}/workflows/Test/badge.svg
    :target: https://github.com/anmut-consulting/{{cookiecutter.repo_name}}/actions
