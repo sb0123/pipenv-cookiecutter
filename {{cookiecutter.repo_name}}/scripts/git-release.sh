@@ -10,7 +10,7 @@
     || pipenv run git push origin master --tags -f --no-verify
     ) \
   || ( git add Pipfile.lock \
-    && git commit -m "Update Pipfile.lock" \
+    && git commit -m "Update Pipfile.lock" --no-verify \
     && ( pipenv run git push origin master --tags -f \
       || pipenv run git push origin master --tags -f --no-verify
       )
