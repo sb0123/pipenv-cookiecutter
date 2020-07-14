@@ -1,6 +1,6 @@
 # See https://pre-commit.com/ for usage and config
 repos:
-- repo: https://github.com/pre-commit/pre-commit-hooks.git
+- repo: https://github.com/pre-commit/pre-commit-hooks
   rev: master
   hooks:
   - id: no-commit-to-branch
@@ -16,31 +16,29 @@ repos:
   - id: trailing-whitespace
     exclude: 'docs/|setup.cfg'
 
-- repo: https://github.com/myint/docformatter.git
+- repo: https://github.com/myint/docformatter
   rev: master
   hooks:
   - id: docformatter
 
-- repo: https://github.com/humitos/mirrors-autoflake.git
+- repo: https://github.com/humitos/mirrors-autoflake
   rev: v1.1
   hooks:
     - id: autoflake
       args: ['--in-place', '--remove-all-unused-imports', '--remove-unused-variable']
 
-- repo: local
+- repo: https://github.com/timothycrosley/isort
+  rev: 5.0.9
   hooks:
   - id: isort
-    name: isort
-    language: system
-    entry: pipenv run isort
-    types: [python]
 
+- repo: https://github.com/ambv/black
+  rev: stable
+  hooks:
   - id: black
-    name: black
-    language: system
-    entry: pipenv run black
-    types: [python]
 
+- repo: local
+  hooks:
   - id: flake8
     name: flake8
     language: system
@@ -61,8 +59,6 @@ repos:
       'flake8-tidy-imports',
     ]
 
-- repo: local
-  hooks:
   - id: mypy
     name: mypy
     language: system
@@ -92,6 +88,9 @@ repos:
     entry: pipenv run pipenv update
     pass_filenames: false
 
+- repo: https://github.com:anmut-consulting/pipenv-setup
+  rev: master
+  hooks:
   - id: pipenv-setup-sync
     name: "pipenv-setup sync with pipfile"
     stages: [push]
