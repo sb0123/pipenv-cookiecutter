@@ -88,7 +88,7 @@ repos:
     entry: pipenv run pipenv update
     pass_filenames: false
 
-- repo: https://github.com:anmut-consulting/pipenv-setup
+- repo: https://github.com/anmut-consulting/pipenv-setup
   rev: master
   hooks:
   - id: pipenv-setup-sync
