@@ -1,5 +1,4 @@
 #!/bin/sh
-set -x
 echo "-> initialise local git repo"
 {
     git init
