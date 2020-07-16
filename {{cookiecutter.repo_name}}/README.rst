@@ -31,7 +31,7 @@ again from the root directory of the repo::
 
 And to deactivate the environment::
 
-    $ exit
+    $ deactivate
 
 Using pipenv
 ------------
