@@ -12,7 +12,7 @@ Setup
 Using pip
 ---------
 
-The preferred way to install this repo is via SSH.  This command will install the latest version of `Data Condition`, provided you have `SSH set up on GitHub`_.
+The preferred way to install this repo is via SSH.  This command will install the latest version of `{{ cookiecutter.project_name }}`, provided you have `SSH set up on GitHub`_.
 
 .. code-block:: console
 
