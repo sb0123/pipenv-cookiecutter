@@ -27,19 +27,23 @@
         && {
           brew install zsh
           brew install python3
+          brew install awscli
           brew install cmake
           brew install git
           brew install htop
           brew install openssl
           brew install readline
+          brew install mysql
           brew install sqlite3
+          brew install postgres
           brew install tree
           brew install unar
           brew install xz
           brew install zlib
           brew install pipx
-          brew install postgres
           brew install pyenv
+          brew install watch
+          brew tap heroku/brew && brew install heroku
         }
     } \
     && echo "\n-> packages installed from brew! <-\n"
@@ -62,14 +66,19 @@
     echo "\n-> installing software from homebrew casks:"
     echo "   google-chrome lastpass mysqlworkbench slack sublime-text the-unarchiver whatsapp"
     {
-        brew cask install authy avast-security google-chrome lastpass mysqlworkbench
-        brew cask install slack sublime-text the-unarchiver
-        brew cask install whatsapp
+        brew cask install authy 
+        brew cask install docker
+        brew cask install google-chrome
+        brew cask install lastpass
+        brew cask install mysqlworkbench
+        brew cask install pg-commander
+        brew cask install sublime-text
+        brew cask install the-unarchiver
         pipx ensurepath && source ~/.zshrc
         # Uncomment block if you want to install the microsoft stuff
         echo "\n-> installing microsoft stuff from homebrew casks:"
         echo "   microsoft-edge microsoft-office microsoft-teams"
-        brew cask install microsoft-edge microsoft-office microsoft-teams
+        brew cask install microsoft-edge
         brew cask install drawio
     } \
     && echo "\n-> installation from homebrew casks successfull <-\n"
