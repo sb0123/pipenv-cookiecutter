@@ -66,7 +66,7 @@
     echo "\n-> installing software from homebrew casks:"
     echo "   google-chrome lastpass mysqlworkbench slack sublime-text the-unarchiver whatsapp"
     {
-        brew cask install authy 
+        brew cask install authy
         brew cask install docker
         brew cask install google-chrome
         brew cask install lastpass
