@@ -79,6 +79,7 @@
         echo "\n-> installing microsoft stuff from homebrew casks:"
         echo "   microsoft-edge microsoft-office microsoft-teams"
         brew cask install microsoft-edge
+        brew cask install microsoft-teams
         brew cask install drawio
     } \
     && echo "\n-> installation from homebrew casks successfull <-\n"
