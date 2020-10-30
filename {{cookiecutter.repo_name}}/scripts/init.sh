@@ -2,7 +2,7 @@
 echo "-> initialise local git repo"
 {
     git init
-    echo "-> running pipenv sync --dev"
+    echo "-> running pipenv install --dev"
     pipenv sync --dev
 
     echo "-> set git to follow tags on push"
