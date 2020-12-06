@@ -40,6 +40,7 @@
           brew install unar
           brew install xz
           brew install zlib
+          brew install zmq
           brew install pipx
           brew install pyenv
           brew install watch
