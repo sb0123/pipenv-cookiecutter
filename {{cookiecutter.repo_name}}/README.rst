@@ -1,5 +1,9 @@
 |Github Test| |Pre-Commit|
 
+.. image:: images/anmut_logo.png
+    :width: 200
+    :align: center
+
 ******************************************************
 {{ cookiecutter.project_name }}
 ******************************************************
