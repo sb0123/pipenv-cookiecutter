@@ -32,7 +32,6 @@ If you are working from source, you can generate the docs using the following co
 
 Once generated, information can be found in:
 
-- **Methodology**: To read more about the allocation methodology, please see :ref:`methodology`.
 - **User Guide**: To read the usage documentation, please see :ref:`usage`.
 
 .. _Documentation:
