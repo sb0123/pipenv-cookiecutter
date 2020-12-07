@@ -34,7 +34,8 @@ pipx install cookiecutter
 
 ## Using Cookiecutter
 Use **cookiecutter to create project** from this template.  
-*Ensure you have creatd your GitHub repo **before** you run the following command.  You will be asked for the `repo_name` of the GitHub project.  Make sure you enter the name verbatim.*
+
+*Ensure you have created your GitHub repo **before** you run the following command.  You will be asked for the `repo_name` of the GitHub project.  Make sure you enter the name verbatim.*
 
 Running the following command will ask you a series of questions.  Please leave the github username on the default (anmut-consulting) to avoid running into problems with adding the remote.  The `project_name` can be fully punctuated, i.e. "My Project", but please ensure you use an [import friendly](https://www.python.org/dev/peps/pep-0008/#id40) name for your `repo_name`.
 
@@ -53,7 +54,7 @@ Once in the newly-generated folder, simply run the following: ([see here for det
 ```
 pipenv run init
 ```
-Finally, remeber to actually activate the environment when you want to interact with the code! From the same newly-created folder:
+Finally, remember to actually activate the environment when you want to interact with the code! From the same newly-created folder:
 ```
 pipenv shell
 ```
