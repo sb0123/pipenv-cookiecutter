@@ -9,53 +9,51 @@
 Setup
 =====
 
-Using pip
----------
+For detailed installation instructions, see :ref:`installation`.
 
-The preferred way to install this repo is via SSH.  This command will install the latest version of `Data Condition`, provided you have `SSH set up on GitHub`_.
+Source Code
+===========
 
-.. code-block:: console
+The {{ cookiecutter.project_name }} source code can be found in the `Github repo`_ or in the `Distributions`_ folder within the Anmut Hub - Software Products SharePoint.
 
-    $ pip install git+ssh://git@github.com/anmut-consulting/{{ cookiecutter.repo_name }}.git@latest
+For more on installing from source, see :ref:`installation`.
 
-.. seealso::
+.. _Github repo: https://github.com/anmut-consulting/{{cookiecutter.repo_name}}
+.. _Distributions:
 
-	For more detailed installation instructions, see :ref:`installation`
+Documentation
+=============
 
-.. _SSH set up on GitHub: https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
+To read the documentation, please download (or sync) the relevant version folder from the `Documentation`_ folder in the Anmut Hub - Software Products SharePoint.
 
-To activate the environment (assuming you are using one),
-again from the root directory of the repo::
+If you are working from source, you can generate the docs using the following command in terminal::
 
-    $ source env/bin/activate
+    $ pipenv run make_docs
 
-And to deactivate the environment::
+Once generated, information can be found in:
 
-    $ deactivate
+- **Methodology**: To read more about the allocation methodology, please see :ref:`methodology`.
+- **User Guide**: To read the usage documentation, please see :ref:`usage`.
 
-Using pipenv
-------------
-if you're using pipenv to manage your environment, you need to add a #egg=display-name to the end of the install instruction.  i.e::
+.. _Documentation:
 
-    $ pipenv install git+ssh://git@github.com/anmut-consulting/{{ cookiecutter.repo_name }}.git@latest#egg={{ cookiecutter.repo_name }}
+Contributions
+=============
 
-To activate the environment, the command is::
+All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome.
 
-    $ pipenv shell
-
-You should see ({{ cookiecutter.repo_name }}) at the start of the prompt now.  This indicates you are in the activated environment.  If you don't see it - something has gone wrong.
-
-To deactivate the environment again, simply run::
-
-    $ exit
+A detailed overview on how to contribute can be found in the :ref:`contributing` guide.
 
 Credits
 =======
 
-This package was created with `Cookiecutter <https://cookiecutter.readthedocs.io>`_ and the `anmut-consulting/pipenv-cookiecutter <https://github.com/anmut-consulting/pipenv-cookiecutter>`_ project template.
+This package was created with `Cookiecutter`_ and the `anmut-consulting/pipenv-cookiecutter`_ project template.
 
-.. |GitHub Test| image:: https://github.com/anmut-consulting/{{cookiecutter.repo_name}}/workflows/Test/badge.svg
-   :target: https://github.com/anmut-consulting/{{cookiecutter.repo_name}}/actions
+.. _Cookiecutter: https://cookiecutter.readthedocs.io
+.. _anmut-consulting/pipenv-cookiecutter: https://github.com/anmut-consulting/pipenv-cookiecutter
+
+.. |GitHub Test| image:: https://github.com/anmut-consulting/vdva/workflows/Test/badge.svg
+   :target: https://github.com/anmut-consulting/vdva/actions
    :alt: github-test
 .. |Pre-Commit| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
    :target: https://github.com/pre-commit/pre-commit
