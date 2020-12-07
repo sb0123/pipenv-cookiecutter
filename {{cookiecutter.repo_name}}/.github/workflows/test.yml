@@ -10,7 +10,22 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: PR actions/checkout@v2
+        uses: actions/checkout@v2
+        if: github.event_name == 'pull_request'
+        with:
+          fetch-depth: 0
+          ref: ${{ '{{' }} github.event.pull_request.head.ref {{ '}}' }}
+
+      - name: PUSH actions/checkout@v2
+        uses: actions/checkout@v2
+        if: github.event_name == 'push'
+        with:
+          fetch-depth: 0
+
+      - uses: webfactory/ssh-agent@v0.4.0
+        with:
+            ssh-private-key: ${{ '{{' }} secrets.SSH_PRIVATE_KEY {{ '}}' }}
 
       - name: Setup Python
         uses: actions/setup-python@v1
@@ -20,10 +35,23 @@ jobs:
       - name: Install dependencies with pipenv
         run: |
           pip install pipenv
-          pipenv install --deploy --dev
+          pipenv sync --dev
 
-      - run: pipenv run isort --recursive --diff
-      - run: pipenv run black --check .
+      - name: isort - import sorting
+        run: |
+          pipenv run isort .
+          git config user.name 'github-actions'
+          git config user.email 'github-actions@github.com'
+          git commit -am "isort: automatic fix of imports" \
+          && git push || echo nothing to commit
+      - name: black - formatting
+        run: |
+          pipenv run black .
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "black: automated blackening of code"\
+          && git push || echo nothing to commit
       - run: pipenv run flake8 .
       - run: pipenv run mypy
       - run: pipenv run pytest --cov --cov-fail-under=100 --cov-report term-missing:skip-covered

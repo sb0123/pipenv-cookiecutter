@@ -33,7 +33,7 @@ repos:
   - id: isort
 
 - repo: https://github.com/ambv/black
-  rev: stable
+  rev: 20.8b1
   hooks:
   - id: black
 
@@ -79,13 +79,6 @@ repos:
     language: system
     entry: pipenv run pytest --cov --cov-fail-under=100 --cov-report term-missing:skip-covered
     types: [python]
-    pass_filenames: false
-
-  - id: pipenv-update-lock
-    name: "Update pipfile.lock"
-    stages: [push]
-    language: system
-    entry: pipenv run pipenv update
     pass_filenames: false
 
 - repo: https://github.com/anmut-consulting/pipenv-setup

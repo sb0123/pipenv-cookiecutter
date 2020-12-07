@@ -16,7 +16,7 @@
     || echo " "
 
     echo "\n-> installing homebrew: \n"
-    (
+    {
         if ! [[ $(brew --version) ]];
         then
             /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -24,10 +24,29 @@
         && echo "\n-> homebrew installed <-\n" \
         && echo "\n-> installing from brew:" \
         && echo "     zsh python3 cmake git htop openssl readline sqlite3 tree unar xz zlib pipx pyenv\n" \
-        && brew reinstall zsh python3 cmake \
-        && brew reinstall git htop openssl readline sqlite3 tree unar xz zlib \
-        && brew reinstall pipx postgres pyenv
-    ) \
+        && {
+          brew install zsh
+          brew install python3
+          brew install awscli
+          brew install cmake
+          brew install git
+          brew install htop
+          brew install openssl
+          brew install readline
+          brew install mysql
+          brew install sqlite3
+          brew install postgres
+          brew install tree
+          brew install unar
+          brew install xz
+          brew install zlib
+          brew install zmq
+          brew install pipx
+          brew install pyenv
+          brew install watch
+          brew tap heroku/brew && brew install heroku
+        }
+    } \
     && echo "\n-> packages installed from brew! <-\n"
 
     touch ~/.zshrc
@@ -47,17 +66,23 @@
 
     echo "\n-> installing software from homebrew casks:"
     echo "   google-chrome lastpass mysqlworkbench slack sublime-text the-unarchiver whatsapp"
-    (
-        brew cask reinstall authy avast-security google-chrome lastpass mysqlworkbench
-        brew cask reinstall slack sublime-text the-unarchiver
-        brew cask reinstall whatsapp
+    {
+        brew cask install authy
+        brew cask install docker
+        brew cask install google-chrome
+        brew cask install lastpass
+        brew cask install mysqlworkbench
+        brew cask install pg-commander
+        brew cask install sublime-text
+        brew cask install the-unarchiver
         pipx ensurepath && source ~/.zshrc
         # Uncomment block if you want to install the microsoft stuff
         echo "\n-> installing microsoft stuff from homebrew casks:"
         echo "   microsoft-edge microsoft-office microsoft-teams"
-        brew cask reinstall microsoft-edge microsoft-office microsoft-teams
-        brew cask reinstall drawio
-    ) \
+        brew cask install microsoft-edge
+        brew cask install microsoft-teams
+        brew cask install drawio
+    } \
     && echo "\n-> installation from homebrew casks successfull <-\n"
 
     echo "\n-> installing from pipx: "
