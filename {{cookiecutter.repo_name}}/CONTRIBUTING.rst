@@ -6,10 +6,14 @@
 Contributing
 ============
 
-Contributions are welcome, and they are greatly appreciated! Every little bit
-helps, and credit will always be given.
+Contributions are welcome, and they are greatly appreciated!
+Every little bit helps, and credit will always be given.
+
+See `Software Development Standards`_ for information on coding, testing and documentation standards.
 
 You can contribute in many ways:
+
+.. _Software Development Standards: https://github.com/anmut-consulting/core/wiki/Software-Development-Standards
 
 Types of Contributions
 ----------------------
@@ -41,7 +45,7 @@ Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
 {{ cookiecutter.project_name }} could always use more documentation, whether as part of the
-official {{ cookiecutter.project_name }} docs and in docstrings.
+official {{ cookiecutter.project_name }} docs or in docstrings.
 
 Submit Feedback
 ~~~~~~~~~~~~~~~
@@ -73,7 +77,7 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.repo_name }}` for loc
 
 4. Create a branch for local development::
 
-    $ git checkout -b name-of-your-bugfix-or-feature
+    $ git checkout -b PLAT-XX_ticket_name_here
 
 Now you can make your changes locally.
 
@@ -97,12 +101,19 @@ Now you can make your changes locally.
 
     $ git add .
     $ git commit -m "Your detailed description of your changes."
-    $ git push origin name-of-your-bugfix-or-feature
+    $ git push origin PLAT-XX_ticket_name_here
 
 7. Submit a pull request through the GitHub website.
 
 Pull Request Guidelines
 -----------------------
+
+When creating a pull request:
+
+* use `feat: PLAT-XX Ticket Title` if you are working on a feature ticket, or `fix: PLAT-XX Ticket Title` if you are working on a bug fix,
+* provide a link to the JIRA ticket in the comment area as well as any additional context,
+* apply the work in progress or do not merge labels if the PR is not quite ready to be reviewed or should not be merged yet, respectively,
+* copy the link into the dev slack channel once the pull request is ready for review so that people know to review it.
 
 Before you submit a pull request, check that it meets these guidelines:
 
@@ -111,6 +122,8 @@ Before you submit a pull request, check that it meets these guidelines:
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
 3. The pull request should work for Python 3.6+
+
+For more information on GitHub standards, see the `Software Development Standards`_ wiki.
 
 Tips
 ----
