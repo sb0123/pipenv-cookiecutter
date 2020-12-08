@@ -23,7 +23,7 @@ The {{ cookiecutter.project_name }} source code can be found in the `Github repo
 For more on installing from source, see :ref:`installation`.
 
 .. _Github repo: https://github.com/anmut-consulting/{{cookiecutter.repo_name}}
-.. _Distributions:
+.. _Distributions: https://anmut.sharepoint.com/Software%20Products/Forms/AllItems.aspx?viewid=54cfec5b%2De127%2D46eb%2D8563%2D014b841d7f73&id=%2FSoftware%20Products%2FWorkstreams
 
 Documentation
 =============
@@ -38,7 +38,7 @@ Once generated, information can be found in:
 
 - **User Guide**: To read the usage documentation, please see :ref:`usage`.
 
-.. _Documentation:
+.. _Documentation: https://anmut.sharepoint.com/Software%20Products/Forms/AllItems.aspx?viewid=54cfec5b%2De127%2D46eb%2D8563%2D014b841d7f73&id=%2FSoftware%20Products%2FWorkstreams
 
 Contributions
 =============
