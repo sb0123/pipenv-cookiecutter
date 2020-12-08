@@ -13,7 +13,7 @@ See `Software Development Standards`_ for information on coding, testing and doc
 
 You can contribute in many ways:
 
-.. _Software Development Standards: https://github.com/anmut-consulting/core/wiki/Software-Development-Standards
+.. _Software Development Standards: https://anmutproductdev.atlassian.net/l/c/PEf0xApd
 
 Types of Contributions
 ----------------------
