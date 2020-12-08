@@ -60,7 +60,8 @@ pipenv shell
 ```
 
 ## Link to Remote repo
-The init script takes care of setting up the remote (if you followed the instructions).  If something went wrong, here's how to do it manually:
+The init script takes care of setting up the remote repo (if you followed the instructions).
+If something went wrong, here's how to do it manually:
 
 1.  Create a new repository on your online platform.
 > To avoid errors, **do not** initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to your remote of choice (GitHub, GitLab, etc...).
@@ -94,6 +95,13 @@ git remote -v
 git push -u origin master
 # Pushes the changes in your local repository up to the remote repository you specified as the origin
 ```
+
+## Update SharePoint Links
+The cookiecutter template README.rst comes with generic links to the Distributions and Documentation that will need updating once you have followed all the instructions above.
+
+If you already have the correct folder setup within your product folder, then its just a matter of copy-pasting those links over the current ones.
+
+If those folders don't exist, you will need to create the folders described in the [Anmut Workstream folders README](https://anmut.sharepoint.com/:w:/g/EYBW8XH-_79OqGboZSckSDIBcwOgb84VRC1MaSz3nsy35Q?e=jTmHg1) before copy-pasting the folder links over the current ones.
 
 ## Failed tests
 Each time a test fails at the push stage, the packages will likely implement a set of improvements to your code which will then need to be manually re-added and committed. 
