@@ -59,7 +59,7 @@ Finally, remember to actually activate the environment when you want to interact
 pipenv shell
 ```
 
-## Link to Remote repo
+## Link to remote repo
 The init script takes care of setting up the remote repo (if you followed the instructions).
 If something went wrong, here's how to do it manually:
 
@@ -96,7 +96,7 @@ git push -u origin master
 # Pushes the changes in your local repository up to the remote repository you specified as the origin
 ```
 
-## Update SharePoint Links
+## Update SharePoint links
 The cookiecutter template README.rst comes with generic links to the Distributions and Documentation SharePoint folders that will need updating once you have followed all the instructions above.
 
 If you already have the correct folder setup within your product folder then its just a matter of copy-pasting those links over the current ones.
