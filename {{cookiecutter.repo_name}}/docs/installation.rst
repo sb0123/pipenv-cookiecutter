@@ -80,11 +80,13 @@ You can either clone the public repository:
 
     $ git clone git://github.com/anmut-consulting/{{ cookiecutter.repo_name }}
 
-Or download the `tarball`_:
+Or download the `tarball`_ of the latest release:
 
 .. code-block:: console
 
     $ curl -OL https://github.com/anmut-consulting/{{ cookiecutter.repo_name }}/tarball/latest
+
+The same can be done for any version by simply replacing ``latest`` by the version tag you wish to download.
 
 .. _tarball: https://github.com/anmut-consulting/{{ cookiecutter.repo_name }}/tarball/latest
 
