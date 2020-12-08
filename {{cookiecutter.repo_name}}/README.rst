@@ -55,8 +55,8 @@ This package was created with `Cookiecutter`_ and the `anmut-consulting/pipenv-c
 .. _Cookiecutter: https://cookiecutter.readthedocs.io
 .. _anmut-consulting/pipenv-cookiecutter: https://github.com/anmut-consulting/pipenv-cookiecutter
 
-.. |GitHub Test| image:: https://github.com/anmut-consulting/vdva/workflows/Test/badge.svg
-   :target: https://github.com/anmut-consulting/vdva/actions
+.. |GitHub Test| image:: https://github.com/anmut-consulting/{{cookiecutter.repo_name}}/workflows/Test/badge.svg
+   :target: https://github.com/anmut-consulting/{{cookiecutter.repo_name}}/actions
    :alt: github-test
 .. |Pre-Commit| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
    :target: https://github.com/pre-commit/pre-commit
