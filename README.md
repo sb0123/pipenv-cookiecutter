@@ -13,7 +13,11 @@ Best practices [cookiecutter](https://github.com/audreyr/cookiecutter) template 
 - Continuous Integration with [GitHub Actions](https://github.com/features/actions)
 
 ## Quickstart
-Before you start, make sure you've covered [the basics](./the_basics.md).  That link takes you to a neat writeup about steps to take to set up a fresh machine.  There is even a handy script [basics](./basics.sh) you can run.
+If you have used this cookiecutter template to create projects before, you can skip this section.
+
+If this is your first time, please make sure you've covered [the basics](./the_basics.md) before you start.
+That link takes you to a neat writeup about steps to take when setting up on a fresh machine.
+There is even a handy script [basics](./basics.sh) you can run.
 
 Install **pipx**
 ```
@@ -33,37 +37,46 @@ pipx install cookiecutter
 ```
 
 ## Using Cookiecutter
-Use **cookiecutter to create project** from this template.  
+First, please ensure you have created an empty repository on the online GitHub platform.
+> To avoid errors, **do not** initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to your remote of choice (GitHub, GitLab, etc...).
 
-*Ensure you have created your GitHub repo **before** you run the following command.  You will be asked for the `repo_name` of the GitHub project.  Make sure you enter the name verbatim.*
-
-Running the following command will ask you a series of questions.  Please leave the github username on the default (anmut-consulting) to avoid running into problems with adding the remote.  The `project_name` can be fully punctuated, i.e. "My Project", but please ensure you use an [import friendly](https://www.python.org/dev/peps/pep-0008/#id40) name for your `repo_name`.
-
-*The folder will be created in the working directory (`pwd`) so make sure you `cd` to where you want to be.*
+Then, from terminal, `cd` to where you want your project to be
 > I use `~/dev/` for my development projects.
+
+and run the following command
 ```
 pipx run cookiecutter gh:anmut-consulting/pipenv-cookiecutter
 ```
+This will prompt a series of questions about the new project you are setting up.
 
-Enter project directory
+You will be asked for the `repo_name` of the GitHub project.
+Make sure you enter the name verbatim.
+
+Please leave the github username on the default (anmut-consulting) to avoid running into problems with adding the remote.
+The `project_name` can be fully punctuated, i.e. "My Project", but please ensure you use an [import friendly](https://www.python.org/dev/peps/pep-0008/#id40) name for your `repo_name`.
+
+When all the questions are answered, a folder is created in your current working directory (`pwd`).
+Enter that newly generated project directory
 ```
 cd <repo_name>
 ```
 
-Once in the newly-generated folder, simply run the following: ([see here for details](./{{cookiecutter.repo_name}}/scripts/init.sh))
+and simply run the following:
 ```
 pipenv run init
 ```
+[see here for details](./{{cookiecutter.repo_name}}/scripts/init.sh)
+
 Finally, remember to actually activate the environment when you want to interact with the code! From the same newly-created folder:
 ```
 pipenv shell
 ```
 
-## Link to remote repo
-The init script takes care of setting up the remote repo (if you followed the instructions).
+## Manually linking your local project to the remote repository
+The init script should take care of linking your local project up to the remote repo (if you followed the instructions).
 If something went wrong, here's how to do it manually:
 
-1.  Create a new repository on your online platform.
+1.  Ensure a new repository exists on your online GitHub platform.
 > To avoid errors, **do not** initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to your remote of choice (GitHub, GitLab, etc...).
 2.  Open Terminal and change the current working directory to your local project.
 3.  Initialize the local directory as a Git repository.
@@ -102,6 +115,8 @@ The cookiecutter template README.rst comes with generic links to the Distributio
 If you already have the correct folder setup within your product folder then its just a matter of copy-pasting those links over the current ones.
 
 If those folders don't exist, you will need to create them (with the blessing of the SharePoint owner) as described in the [Anmut Workstream folders README](https://anmut.sharepoint.com/:w:/g/EYBW8XH-_79OqGboZSckSDIBcwOgb84VRC1MaSz3nsy35Q?e=jTmHg1) before copy-pasting the folder links over the current ones.
+
+Or, if you would rather keep those high level links, then please make sure you include instructions on how to navigate to the correct folders.
 
 ## Failed tests
 Each time a test fails at the push stage, the packages will likely implement a set of improvements to your code which will then need to be manually re-added and committed. 
