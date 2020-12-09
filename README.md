@@ -13,9 +13,9 @@ Best practices [cookiecutter](https://github.com/audreyr/cookiecutter) template 
 - Continuous Integration with [GitHub Actions](https://github.com/features/actions)
 
 ## Quickstart
-Skip this section if you have used this cookiecutter template to create projects before.
+If you have used this cookiecutter template before, you can go ahead and skip this section.
 
-However, if this is your first time, please make sure you've covered [the basics](./the_basics.md) before you start.
+If this is your first time, please make sure you've covered [the basics](./the_basics.md) before you start.
 That link takes you to a neat writeup about steps to take when setting up on a fresh machine.
 There is even a handy script [basics](./basics.sh) you can run.
 
@@ -47,6 +47,12 @@ and run the following command
 ```
 pipx run cookiecutter gh:anmut-consulting/pipenv-cookiecutter
 ```
+
+If you want to specify a branch you can do that with:
+```
+pipx run cookiecutter gh:anmut-consulting/pipenv-cookiecutter --checkout <branch_name>
+```
+
 This will prompt a series of questions about the new project you are setting up.
 
 You will be asked for the `repo_name` of the GitHub project.
