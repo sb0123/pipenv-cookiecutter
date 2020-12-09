@@ -53,7 +53,7 @@ If you want to specify a branch you can do that with:
 pipx run cookiecutter gh:anmut-consulting/pipenv-cookiecutter --checkout <branch_name>
 ```
 
-This will prompt a series of questions about the new project you are setting up.
+Both will prompt a series of questions about the new project you are setting up.
 
 You will be asked for the `repo_name` of the GitHub project.
 Make sure you enter the name verbatim.
