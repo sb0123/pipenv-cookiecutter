@@ -2,8 +2,14 @@
 echo "-> initialise local git repo"
 {
     git init
-    echo "-> running pipenv install --dev"
-    pipenv sync --dev
+
+    if [ -f Pipfile.lock ]; then
+        echo "-> Pipfile.lock present! Running pipenv sync --dev"
+        pipenv sync --dev
+    else
+        echo "-> Pipfile.lock absent! Running pipenv install --dev"
+        pipenv install --dev
+    fi
 
     echo "-> set git to follow tags on push"
     git config push.followTags true
