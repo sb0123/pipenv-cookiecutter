@@ -31,6 +31,7 @@
           brew install cmake
           brew install git
           brew install htop
+          brew install openblas
           brew install openssl
           brew install readline
           brew install mysql
