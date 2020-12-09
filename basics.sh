@@ -32,6 +32,7 @@
           brew install git
           brew install htop
           brew install openblas
+          brew install libjpeg
           brew install openssl
           brew install readline
           brew install mysql
