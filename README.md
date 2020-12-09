@@ -13,9 +13,9 @@ Best practices [cookiecutter](https://github.com/audreyr/cookiecutter) template 
 - Continuous Integration with [GitHub Actions](https://github.com/features/actions)
 
 ## Quickstart
-If you have used this cookiecutter template to create projects before, you can skip this section.
+Skip this section if you have used this cookiecutter template to create projects before.
 
-If this is your first time, please make sure you've covered [the basics](./the_basics.md) before you start.
+However, if this is your first time, please make sure you've covered [the basics](./the_basics.md) before you start.
 That link takes you to a neat writeup about steps to take when setting up on a fresh machine.
 There is even a handy script [basics](./basics.sh) you can run.
 
