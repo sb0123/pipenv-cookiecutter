@@ -78,6 +78,13 @@ Finally, remember to actually activate the environment when you want to interact
 pipenv shell
 ```
 
+## Creating an iPython Kernel to run your code
+The final step of creating a code-ready environment is to install an iPython kernel that will allow processors such as Jupyter Notebooks to execute code in this envornment.
+Simply run the following inside the pipenv shell:
+```
+python -m ipykernel install --user --name=<name_of_your_repo>
+```
+
 ## Manually linking your local project to the remote repository
 The init script should take care of linking your local project up to the remote repo (if you followed the instructions).
 If something went wrong, here's how to do it manually:
