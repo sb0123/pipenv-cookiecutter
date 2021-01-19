@@ -1,12 +1,32 @@
 name: Test
 
 on:
-  pull_request: {}
-  push:
-    branches: master
-    tags: "*"
+  pull_request:
+    types: [ assigned, edited, opened, ready_for_review, reopened, synchronize ]
+  workflow_dispatch:  # Go to [Actions] - select Test -> [Run workflow]
 
 jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Setup Python
+      uses: actions/setup-python@master
+      with:
+          python-version: {{ cookiecutter.python_version }}
+
+    - name: Install dependencies with pipenv
+      run: |
+          pip install pipenv
+          pipenv sync --dev
+
+    - uses: pre-commit/action@v2.0.0
+      with:
+        token: ${{ '{{' }} secrets.GITHUB_TOKEN {{ '}}' }}
+
   test:
     runs-on: ubuntu-latest
     steps:
@@ -23,35 +43,20 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: webfactory/ssh-agent@v0.4.0
+      - uses: webfactory/ssh-agent@v0.4.1
         with:
             ssh-private-key: ${{ '{{' }} secrets.SSH_PRIVATE_KEY {{ '}}' }}
 
       - name: Setup Python
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@master
         with:
-          python-version: {python_version}
+          python-version: {{ cookiecutter.python_version }}
 
       - name: Install dependencies with pipenv
         run: |
           pip install pipenv
           pipenv sync --dev
 
-      - name: isort - import sorting
-        run: |
-          pipenv run isort .
-          git config user.name 'github-actions'
-          git config user.email 'github-actions@github.com'
-          git commit -am "isort: automatic fix of imports" \
-          && git push || echo nothing to commit
-      - name: black - formatting
-        run: |
-          pipenv run black .
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "black: automated blackening of code"\
-          && git push || echo nothing to commit
-      - run: pipenv run flake8 .
-      - run: pipenv run mypy
+      - run: pipenv run pytest
+
       - run: pipenv run pytest --cov --cov-fail-under=100 --cov-report term-missing:skip-covered
