@@ -31,8 +31,8 @@ Using Pycharm
         |git branch|
 
 
-    #.  Select the **cookiecutter-update** branch and click on check diff
-        |check diff|
+    #.  Select the **cookiecutter-update** branch and click on "Show Diff with Working Tree"
+        |show diff|
         to compare changes between your current branch and the newly generated cookiecutter project
 
     #.  Review each file by double-clicking on the name, selecting the changes you want:
@@ -56,7 +56,7 @@ Using command line Git
 Please note that this method is not recommended since it would take a lot longer
 and would potentially be more prone to error.  Use this only when you don't have access to PyCharm's git tools.
 
-    #.  Use 'git diff ${CURRENT_BRANCH}..cookiecutter-update' to see the changes, replacing $(CURRENT_BRANCH) with your branch name
+    #.  Use ``git diff ${CURRENT_BRANCH}..cookiecutter-update`` to see the changes, replacing ``$(CURRENT_BRANCH)`` with your branch name
 
     #.  Copy the changes you want to make from cookiecutter to your local file.
 
@@ -69,5 +69,5 @@ and would potentially be more prone to error.  Use this only when you don't have
 .. _cookiecutter-update.sh: scripts/init.sh
 .. _cookiecutter.yaml: cookiecutter.yaml
 .. |git branch| image:: images/updating_git_branch.png
-.. |check diff| image:: images/updating_check_diff.png
+.. |show diff| image:: images/updating_show_diff.png
 .. |get from branch| image:: images/updating_get_from_branch.png
