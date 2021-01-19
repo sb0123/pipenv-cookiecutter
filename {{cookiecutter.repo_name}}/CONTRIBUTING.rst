@@ -152,7 +152,7 @@ You can check the command next to each of the **entry:** lines in :file:`.pre-co
 Check the [scripts] section in :file:`Pipfile` to see the shortcuts you can run with ``$ pipenv run ..``, i.e. ``$ pipenv run coverage``.
 
 Creating Releases
----------
+-----------------
 
 New releases are automatically created for anything that is merged into master.  A versioned tag corresponding to the code version is created on Github and the **latest** tag is updated to, well, the latest version.
 **This happens automatically and requires no action on your part.**  (If you'd like to understand how, check :file:`.github/workflows/tags_on_merge.yml` for the responsible file/configuration.

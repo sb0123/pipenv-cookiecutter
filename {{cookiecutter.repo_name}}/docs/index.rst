@@ -13,6 +13,7 @@ Welcome to {{ cookiecutter.project_name }}'s documentation!
    authors
    history
    todo
+   updating
    API Reference <autoapi/index>
 
 Indices and tables
