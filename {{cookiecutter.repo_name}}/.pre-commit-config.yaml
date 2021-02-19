@@ -63,7 +63,7 @@ repos:
     name: add_inits
     language: system
     entry: bash -c \
-      "for DIR in $(find \"./data_condition\" -type d); do
+      "for DIR in $(find \"./{{ cookiecutter.repo_name }}\" -type d); do
         touch $DIR/__init__.py;
       done"
 
