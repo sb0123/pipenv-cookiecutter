@@ -37,12 +37,23 @@ jobs:
       id: bump-version
       working-directory: new_version
       run: |
+        release_type=${{ github.event.inputs.release_type }}
+
         CUR_VER=$(grep "current_version = " ../base/setup.cfg|cut -d " " -f3)
+        cur_ver_major=$(printf %s "$CUR_VER" | cut -d "." -f 1)
+        cur_ver_minor=$(printf %s "$CUR_VER" | cut -d "." -f 2)
+        cur_ver_patch=$(printf %s "$CUR_VER" | cut -d "." -f 3)
+
         git config user.name = github-actions
         git config user.email = github-actions@github.com
-        bumpversion --current-version ${CUR_VER} ${{ '{{' }} github.event.inputs.release_type {{ '}}' }} --no-tag
+        bumpversion --current-version ${CUR_VER} $release_type --no-tag
+
         NEW_VER=$(grep "current_version = " setup.cfg|cut -d " " -f3)
-        if [[ $NEW_VER > $CUR_VER ]]; then
+        new_ver_major=$(printf %s "$NEW_VER" | cut -d "." -f 1)
+        new_ver_minor=$(printf %s "$NEW_VER" | cut -d "." -f 2)
+        new_ver_patch=$(printf %s "$NEW_VER" | cut -d "." -f 3)
+
+        if [[ (release_type = "major" && $new_ver_major > $cur_ver_major) || (release_type = "minor" && $new_ver_minor > $cur_ver_minor) ]]; then
             echo "All good!"; else
             echo "New version is not greater than current version!"
             exit 1
